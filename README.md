@@ -2,6 +2,6 @@
 Retseptihoidla-veebiäpp (tudengiprojekt) 
 
 Meeskonnaliikmed:  
-Juta Mae   
-Mark Henri Pedoson  
-Stanislav Belogrivov  
+Juta Mae                (yootah)
+Mark Henri Pedoson      (markhenrip)
+Stanislav Belogrivov    (Untar1)
