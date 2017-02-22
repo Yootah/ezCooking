@@ -1,6 +1,7 @@
 # ezCooking
-Retseptihoidla-veebiäpp (tudengiprojekt)
+Retseptihoidla-veebiäpp (tudengiprojekt) 
 
-Meeskonnaliikmed:
-Juta Mae
-Mark Henri Pedoson
+Meeskonnaliikmed:  
+Juta Mae   
+Mark Henri Pedoson  
+Stanislav Belogrivov  
