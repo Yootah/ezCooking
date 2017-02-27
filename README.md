@@ -11,4 +11,3 @@ Veebiäpp peaks olema huvitav - kõik kasutajad saavad otsida retseptid ja ka is
 
 # Koormuse jagamine
   TBA
-  TBA
