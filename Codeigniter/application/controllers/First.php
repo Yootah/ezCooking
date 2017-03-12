@@ -20,6 +20,10 @@ class First extends CI_Controller {
 	 */
 	public function index()
 	{
+		//$this->load->view('first');
+		$title['title'] = 'VRL - KKK';
+		$this->load->view('navigation', $title);	
 		$this->load->view('first');
+		$this->load->view('footer');
 	}
 }

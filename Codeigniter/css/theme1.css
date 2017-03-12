@@ -1,0 +1,201 @@
+button#facebook {
+    border-color: #2d5073;
+    background-color: #3b5998;
+    background-image: url('../images/facebook-icon.png');
+}
+button#idkaart{
+    background-image: url('../images/id-icon.png');
+    color:black;
+    border-color:blue;
+    background-color:white;
+
+}
+
+table,td, tr {
+    padding: 5px;
+}
+.global-table {
+	height:100%;
+	width:100%;
+}
+
+.td_borders {
+	width: 5%;
+}
+.td_body {
+	height:80%;
+}
+.td_blank_area {
+	width: 20px;
+}
+.td_action_bar {
+	width: 15%;
+	text-align:center;
+}
+.div_copyright_info {
+	bottom:0px;
+	width:80%;
+	margin: auto;
+}
+.div_recipe {
+	width: 100%;
+    border-color:gray;
+    background-color:#fafafa;
+}
+
+
+div.social-wrap button {
+    padding-right: 45px;
+    height: 37px;
+    background: none;
+    border: none;
+    display: block;
+    background-size: 35px 35px;
+    background-position: right center;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    color: white;
+    font-family:"Merriweather Sans", sans-serif;
+    font-size: 14px;
+    margin-top: 7px;
+    margin-right:5px;
+    width: 205px;
+    border-top:1px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+.btn-primary-outline {
+  background-color: transparent;
+}
+
+.nav li{
+    padding-top: 15px;
+    height:80px;
+    font-size:22px;
+}
+.navbar-brand{
+    padding-top:30px;
+    font-size:19px;
+}
+.all:hover{
+    background-color:rgba(0,0,11,0.3);
+    color:white !important;
+   
+}
+.all{
+    margin-right:3px;
+}
+
+/* logo stiil kontankti lehel*/
+#logo{
+    padding-top: 15px;
+}
+
+/* load more stiil nupp KKK lehel */
+#KKK li{
+	display: block;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+#KKK h4{
+    font-family: 'Open Sans', sans-serif;
+}
+li.vastus{
+    padding-bottom: 15px;
+}
+
+#loadMore {
+    color: green;
+    cursor: pointer;
+}
+#loadMore:hover {
+    color: black;
+}
+#showLess {
+    color: green;
+    cursor: pointer;
+}
+#showLess:hover {
+    color: black;
+}
+h3{
+	text-align: center;
+}
+h2{
+	text-align: center;
+}
+.categoryButton.btn{
+    margin-bottom: 10px;
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+}
+.categoryButton.btn:hover{
+    background-color: #9acfea;
+}
+
+#poleJs{
+    font-size: 12px;
+}
+
+.footer{
+    font-size: 13px;
+    color: #333;
+}
+p.footer{
+    margin-bottom: 0px;
+}
+
+
+a.footer:hover{
+    color: #333;
+}
+
+.img {
+  border-radius: 80px;
+  height: 20px;
+  width: 20px;
+}
+
+ul.sitemap {
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+ul.sitemap li {
+    list-style: none;
+    padding-left: 12px;
+    margin-bottom: 7px;
+}
+ul.sitemap li a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    color:#222;
+    padding-left: 11px;
+}
+ul.sitemap li#minu a {
+    font-size: 14px;
+    font-weight: normal;
+    color:#222;
+    padding-left: 8px;
+}
+h3#sisu{
+    font-family: 'Open Sans', sans-serif;
+}
+.notseen{
+	display: none;
+}
+.mapid{
+	margin: auto;
+    width: 60%;
+    padding: 10px;
+	height:600px;
+}
+
+#hided{
+	display: none;
+}
+
+

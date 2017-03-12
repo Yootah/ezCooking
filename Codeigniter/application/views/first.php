@@ -4,7 +4,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<title>Super awesome page</title>
 	
 	<style type="text/css">
 
@@ -67,13 +66,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 
 <body>
-<div id="container">
-	<h1>Seems like a working title.</h1>
-	<div id="body">
-		<p>Okay, now we should test if it works.....
-		Anyways, time to <a href="welcome">go back</a>, i assume.</p>
-	</div>
-</div>
+<table style="width:100%; border-spacing: 0px">
+	<tr>
+	<th style="text-align: left" width="25%">'LOGO HERE'</th>
+	<th style="text-align: left" width="12.5%">News</th>
+	<th style="text-align: left" width="12.5%">Search</th>
+	<th style="text-align: left" width="12.5%">Log in</th>
+	<th style="text-align: left" width="12.5%">Register</th>
+	<th width="25%"></th>
+	
+	</tr>
+	
+	<tr>
+		<td width="25%"></td>
+		<td colspan="4">
+		<h1>Seems like a working title.</h1>
+		<div id="body">
+			<p>Okay, now we should test if it works.....
+			Anyways, time to <a href="welcome">go back</a>, i assume.</p>
+		</div>
+		</td>
+		<td width="25%"></td>
+	</tr>
+</table>
 </body>
 
 </html>
