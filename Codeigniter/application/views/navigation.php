@@ -20,6 +20,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
 	<script src="./js/dropdown.js"></script>
+	<script src="./js/newPostScript.js"></script>
 	
 
 <!-- <style>
