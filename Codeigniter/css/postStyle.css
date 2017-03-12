@@ -1,0 +1,10 @@
+img.media-object#recept {
+	width: 180px;
+}
+
+img.media-object#avatar {
+	width: 60px;
+}
+h4, h5, p {
+	margin-left: 10px;
+}
