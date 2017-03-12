@@ -9,5 +9,5 @@ Stanislav Belogrivov    (Untar1)
 # Üldine idee
 Veebiäpp peaks olema huvitav - kõik kasutajad saavad otsida retseptid ja ka ise neid lisada.
 
-# Koormuse jagamine
-  TBA
+# Testkeskkonna aadress
+http://ezcooking.cs.ut.ee
