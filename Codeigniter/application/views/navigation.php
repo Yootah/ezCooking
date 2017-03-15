@@ -69,6 +69,7 @@ table, th, td {
 	                <li class="all"><a href="./search">Search</a></li>
 	                <li class="all"><a href="./login">Log in</a></li>
 	                <li class="all"><a href="./register">Register</a></li>
+	                <li class="all"><a href="./aboutus">About us</a></li>
 	            </ul>
 	        </div>
 	</td></tr></table>
