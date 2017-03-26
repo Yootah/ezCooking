@@ -2,76 +2,42 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
 
-	<h1>Register</h1>
-	<form class="form-horizontal">
-  <div class="form-group">
-    <div class="col-md-4">
-      <input type="text" class="form-control" id="username" placeholder="Username">
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-md-4">
-      <input type="email" class="form-control" id="email" placeholder="Email">
-    </div>
-    <label class="checkbox-inline"><input type="checkbox" id="email_private"> Private</label>
-  </div>
-  <div class="form-group">
-  <div class="col-md-1">
-  <select class="form-control" id="sel1">
-    <option value="" selected disabled>DD</option>
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-  </select>
-  </div>
-  <div class="col-md-1">
-  <select class="form-control" id="sel2">
-    <option value="" selected disabled>MM</option>
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-  </select>
-  </div>
-  <div class="col-md-2">
-  <select class="form-control" id="sel3">
-    <option value="" selected disabled>YYYY</option>
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-  </select>
-  </div>
-  <label class="checkbox-inline"><input type="checkbox" id="bday_private"> Private</label>
+<h1>Register</h1>
+<?php echo validation_errors(); ?>
+<?php echo form_open('register'); ?>
+<div class="col-sm-offset-2 col-sm-10">
+	<label class="control-label col-sm-2" for='username'>Username:</label>
+			<input type='text' class="form-control" size='20' id='username' placeholder="Username" name='username'/>
+			<br/>
+	<label class="control-label col-sm-2" for='email'>Email:</label>
+			<input type='text' class="form-control" size='20' id='email' placeholder="Email" name='email'/>
+	<label class="checkbox-inline"><input type="checkbox" id="email_private"> Private</label>
+	<br/>
+	
+	<label class="control-label col-sm-2" for='password'>Password:</label>
+			<input type='password' class="form-control" size='20' id='password' placeholder="Password" name='password'/>
+			<br/>
+	<label class="control-label col-sm-2" for='passwordr'>Repeat Password:</label>
+			<input type='password' class="form-control" size='20' id='passwordr' placeholder="PasswordR" name='passwordr'/>
+			<br/>
+	<div class="form-group"> 
+		<div class="col-md-4">
+			<div class="checkbox">
+				<label><input type="checkbox"> Send notifications via Email</label>
+			</div>
+		</div>
+	</div>
+	<div class="form-group"> 
+		<div class="col-md-4">
+			<h2>Your Avatar</h2>
+			<p>Coming soon!</p>
+		</div>
+	</div>
+	<div class="form-group"> 
+		<div class="col-md-4">
+			<input type='submit' value='Register'/>
+		</div>
+		<br>
+	</div>
 </div>
-  <div class="form-group">
-    <div class="col-md-4"> 
-      <input type="password" class="form-control" id="pwd" placeholder="Password">
-    </div>
-  </div>
-  <div class="form-group">
-    <div class="col-md-4"> 
-      <input type="password" class="form-control" id="repwd" placeholder="Repeat Password">
-    </div>
-  </div>
-  <div class="form-group"> 
-    <div class="col-md-4">
-      <div class="checkbox">
-        <label><input type="checkbox"> Send notifications via Email</label>
-      </div>
-    </div>
-  </div>
-  <div class="form-group"> 
-    <div class="col-md-4">
-    <h2>Your Avatar</h2>
-    <p>Coming soon!</p>
-    </div>
-  </div>
-  <div class="form-group"> 
-    <div class="col-md-4">
-    <button type="button" class="btn btn-default">Sign me up!</button>
-    </div>
-    <br>
-  </div>
 </form>
