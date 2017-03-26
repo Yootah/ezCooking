@@ -20,7 +20,6 @@ class First extends CI_Controller {
 	 */
 	public function index()
 	{
-		//$this->load->view('first');
 		$title['title'] = 'Page Title';
 		$this->load->view('navigation', $title); // DO NOT CHANGE
 		$this->load->view('view name here'); //
