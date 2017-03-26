@@ -43,8 +43,10 @@ class Login extends CI_Controller {
 		}
 		$this->load->view('footer'); // DO NOT CHANGE
 	}
-}	
+	
+	function check_database($password) {
 		$username = $this->input->post('username');
+		$password = $this -> input ->post('password');
 		$result = $this->user->login($username, $password);
 		if($result) {
 			$sess_array = array();
@@ -52,6 +54,7 @@ class Login extends CI_Controller {
 				$sess_array = array('username' => $row->username);
 				$this->session->set_userdata('logged_in', $sess_array);
 			}
+			$this -> user -> updLastSeen($username);
 			return TRUE;
 		}
 		else {

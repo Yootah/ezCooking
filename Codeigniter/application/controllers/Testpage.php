@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Search extends CI_Controller {
+class Testpage extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,21 +20,9 @@ class Search extends CI_Controller {
 	 */
 	public function index()
 	{
-		
-		//$this->load->view('first');
-		$title['title'] = 'Search';
+		$title['title'] = 'Page Title';
 		$this->load->view('navigation', $title); // DO NOT CHANGE
-		$data['db_resp'] = null;
-		$this->load->view('search', $data); //
-		$this->load->view('footer'); // DO NOT CHANGE
-	}
-	
-	public function show_search($search){
-		$this->load->model("Search_model");
-		$search_data['db_resp']=$this->Search_model->getSearchArray($search);
-		$title['title'] = 'Search';
-		$this->load->view('navigation', $title); // DO NOT CHANGE
-		$this->load->view('search',$search_data);
+		$this->load->view('testpage'); //
 		$this->load->view('footer'); // DO NOT CHANGE
 	}
 }

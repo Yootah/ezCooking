@@ -1,0 +1,21 @@
+ingr_table {
+	display: table;
+	width: 100%;
+	
+}
+
+ingredient {
+	border: solid;
+	display: table-row;
+	width: 100%;
+	
+	
+}
+
+cell, ilabel {
+	display: table-cell;
+	margin: 15px;
+	padding: 15px;
+	text-align: center;
+}
+

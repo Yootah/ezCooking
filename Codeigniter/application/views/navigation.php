@@ -4,20 +4,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <!DOCTYPE html>
 <html lang="en">
-<head><meta http-equiv="Content-Type" content="text/html; charset=euc-jp">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	
 	
 	<?php 
     if(isset($title)){
     echo "<title>" . $title . "</title>";
     } else {
-    	echo "<title>Tiitli muutuja tühi</title>";
+    	echo "<title>Tiitli muutuja tyhi</title>";
 	}
     ?>
 	<link rel="stylesheet" href="./css/bootstrap.min.css"  type="text/css" />
 	<link rel="stylesheet" href="./css/theme1.css"  type="text/css" /> 
 	<link rel="stylesheet" href="./css/dropdown.css"  type="text/css" /> 
 	<link rel="stylesheet" href="./css/postStyle.css"  type="text/css" /> 
+	<link rel="stylesheet" href="./css/ingr_table.css"  type="text/css" /> 
+	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
 	<script src="./js/dropdown.js"></script>
@@ -39,7 +41,7 @@ table, th, td {
 <td colspan="3">
 	<nav class="navbar navbar-default">
 	    <div class="container-fluid">
-    <table width="100%">
+	    <table>
 	<tr>
 	<td>
 			<a href="./welcome"><img src = "./images/logo.png" width="100" height="100" alt="ezCooking logo"></a>
@@ -62,11 +64,12 @@ table, th, td {
 					
 					<li class="all"><a href="./welcome">News</a></li>
 					-->
-					<li onclick="myFunction()" class="dropbtn dropdown">News</li>
+					<li onclick="myFunction()" class="dropbtn dropdown" id="newsButton">News
 					<div id="myDropdown" class="dropdown-content">
 						<a href="./welcome">Hot</a>
 						<a href="./subbed">Subs</a>
 						</div>
+						</li>
 	                <li class="all"><a href="./search">Search</a></li>
 	                <li class="all"><a href="./login">Log in</a></li>
 	                <li class="all"><a href="./register">Register</a></li>

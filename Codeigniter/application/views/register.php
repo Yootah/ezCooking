@@ -16,36 +16,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <label class="checkbox-inline"><input type="checkbox" id="email_private"> Private</label>
   </div>
   <div class="form-group">
-  <div class="col-md-1">
-  <select class="form-control" id="sel1">
-    <option value="" selected disabled>DD</option>
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-  </select>
-  </div>
-  <div class="col-md-1">
-  <select class="form-control" id="sel2">
-    <option value="" selected disabled>MM</option>
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-  </select>
-  </div>
-  <div class="col-md-2">
-  <select class="form-control" id="sel3">
-    <option value="" selected disabled>YYYY</option>
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-  </select>
-  </div>
-  <label class="checkbox-inline"><input type="checkbox" id="bday_private"> Private</label>
-</div>
-  <div class="form-group">
     <div class="col-md-4"> 
       <input type="password" class="form-control" id="pwd" placeholder="Password">
     </div>
