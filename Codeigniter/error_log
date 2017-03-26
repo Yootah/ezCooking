@@ -1,0 +1,61 @@
+[12-Mar-2017 14:57:28 Europe/Tallinn] PHP Fatal error:  Call to undefined function base_url() in /webpages/ezcookingcsut/public_html/application/views/navigation.php on line 17
+[12-Mar-2017 14:59:30 Europe/Tallinn] PHP Fatal error:  Call to undefined function base_url() in /webpages/ezcookingcsut/public_html/application/views/testpage.php on line 14
+[12-Mar-2017 14:59:33 Europe/Tallinn] PHP Fatal error:  Call to undefined function base_url() in /webpages/ezcookingcsut/public_html/application/views/testpage.php on line 14
+[12-Mar-2017 14:59:37 Europe/Tallinn] PHP Fatal error:  Call to undefined function base_url() in /webpages/ezcookingcsut/public_html/application/views/testpage.php on line 14
+[12-Mar-2017 14:59:38 Europe/Tallinn] PHP Fatal error:  Call to undefined function base_url() in /webpages/ezcookingcsut/public_html/application/views/testpage.php on line 14
+[12-Mar-2017 15:00:27 Europe/Tallinn] PHP Fatal error:  Call to undefined function base_url() in /webpages/ezcookingcsut/public_html/application/views/testpage.php on line 14
+[12-Mar-2017 15:00:29 Europe/Tallinn] PHP Fatal error:  Call to undefined function base_url() in /webpages/ezcookingcsut/public_html/application/views/testpage.php on line 14
+[12-Mar-2017 15:00:36 Europe/Tallinn] PHP Fatal error:  Call to undefined function base_url() in /webpages/ezcookingcsut/public_html/application/views/testpage.php on line 14
+[12-Mar-2017 15:00:38 Europe/Tallinn] PHP Fatal error:  Call to undefined function base_url() in /webpages/ezcookingcsut/public_html/application/views/testpage.php on line 14
+[22-Mar-2017 14:47:21 Europe/Tallinn] PHP Parse error:  syntax error, unexpected ',' in /webpages/ezcookingcsut/public_html/application/controllers/Verifylogin.php on line 24
+[22-Mar-2017 14:57:59 Europe/Tallinn] PHP Parse error:  syntax error, unexpected ',' in /webpages/ezcookingcsut/public_html/application/controllers/Verifylogin.php on line 26
+[22-Mar-2017 14:59:02 Europe/Tallinn] PHP Parse error:  syntax error, unexpected ',' in /webpages/ezcookingcsut/public_html/application/controllers/Verifylogin.php on line 19
+[22-Mar-2017 14:59:27 Europe/Tallinn] PHP Fatal error:  Call to a member function login() on null in /webpages/ezcookingcsut/public_html/application/controllers/Verifylogin.php on line 19
+[22-Mar-2017 15:01:51 Europe/Tallinn] PHP Parse error:  syntax error, unexpected '?>', expecting function (T_FUNCTION) in /webpages/ezcookingcsut/public_html/application/controllers/Verifylogin.php on line 39
+[22-Mar-2017 15:01:52 Europe/Tallinn] PHP Parse error:  syntax error, unexpected '?>', expecting function (T_FUNCTION) in /webpages/ezcookingcsut/public_html/application/controllers/Verifylogin.php on line 39
+[22-Mar-2017 15:01:53 Europe/Tallinn] PHP Parse error:  syntax error, unexpected '?>', expecting function (T_FUNCTION) in /webpages/ezcookingcsut/public_html/application/controllers/Verifylogin.php on line 39
+[22-Mar-2017 15:03:10 Europe/Tallinn] PHP Fatal error:  Call to a member function get() on null in /webpages/ezcookingcsut/public_html/application/models/User.php on line 10
+[26-Mar-2017 16:59:23 Europe/Tallinn] PHP Fatal error:  Call to a member function getPostArray() on null in /webpages/ezcookingcsut/public_html/application/controllers/Post.php on line 25
+[26-Mar-2017 17:00:55 Europe/Tallinn] PHP Fatal error:  Call to undefined method Post_model::getPostArray() in /webpages/ezcookingcsut/public_html/application/controllers/Post.php on line 28
+[26-Mar-2017 17:45:13 Europe/Tallinn] PHP Fatal error:  Call to a member function getPostArray() on null in /webpages/ezcookingcsut/public_html/application/controllers/Post.php on line 26
+[26-Mar-2017 17:45:44 Europe/Tallinn] PHP Fatal error:  Call to a member function getPostArray() on null in /webpages/ezcookingcsut/public_html/application/controllers/Post.php on line 26
+[26-Mar-2017 17:48:34 Europe/Tallinn] PHP Fatal error:  Call to a member function getPostArray() on null in /webpages/ezcookingcsut/public_html/application/controllers/Post.php on line 31
+[26-Mar-2017 17:51:13 Europe/Tallinn] PHP Parse error:  syntax error, unexpected 'endforeach' (T_ENDFOREACH) in /webpages/ezcookingcsut/public_html/application/views/post.php on line 10
+[26-Mar-2017 17:53:30 Europe/Tallinn] PHP Parse error:  syntax error, unexpected end of file in /webpages/ezcookingcsut/public_html/application/views/post.php on line 39
+[26-Mar-2017 18:48:19 Europe/Tallinn] PHP Parse error:  syntax error, unexpected '}' in /webpages/ezcookingcsut/public_html/application/controllers/Login.php on line 61
+[26-Mar-2017 18:48:22 Europe/Tallinn] PHP Parse error:  syntax error, unexpected '}' in /webpages/ezcookingcsut/public_html/application/controllers/Login.php on line 61
+[26-Mar-2017 18:48:23 Europe/Tallinn] PHP Parse error:  syntax error, unexpected '}' in /webpages/ezcookingcsut/public_html/application/controllers/Login.php on line 61
+[26-Mar-2017 18:48:24 Europe/Tallinn] PHP Parse error:  syntax error, unexpected '}' in /webpages/ezcookingcsut/public_html/application/controllers/Login.php on line 61
+[26-Mar-2017 18:48:31 Europe/Tallinn] PHP Parse error:  syntax error, unexpected '}' in /webpages/ezcookingcsut/public_html/application/controllers/Login.php on line 61
+[26-Mar-2017 18:48:49 Europe/Tallinn] PHP Parse error:  syntax error, unexpected '}' in /webpages/ezcookingcsut/public_html/application/controllers/Login.php on line 61
+[26-Mar-2017 18:49:21 Europe/Tallinn] PHP Parse error:  syntax error, unexpected '}' in /webpages/ezcookingcsut/public_html/application/controllers/Login.php on line 61
+[26-Mar-2017 18:49:21 Europe/Tallinn] PHP Parse error:  syntax error, unexpected '}' in /webpages/ezcookingcsut/public_html/application/controllers/Login.php on line 61
+[26-Mar-2017 18:49:22 Europe/Tallinn] PHP Parse error:  syntax error, unexpected '}' in /webpages/ezcookingcsut/public_html/application/controllers/Login.php on line 61
+[26-Mar-2017 18:49:25 Europe/Tallinn] PHP Parse error:  syntax error, unexpected '}' in /webpages/ezcookingcsut/public_html/application/controllers/Login.php on line 61
+[26-Mar-2017 18:52:16 Europe/Tallinn] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /webpages/ezcookingcsut/public_html/application/views/post.php on line 15
+[26-Mar-2017 18:53:18 Europe/Tallinn] PHP Parse error:  syntax error, unexpected ''manufacturer];' (T_ENCAPSED_AND_WHITESPACE), expecting ']' in /webpages/ezcookingcsut/public_html/application/views/post.php on line 15
+[26-Mar-2017 19:14:04 Europe/Tallinn] PHP Parse error:  syntax error, unexpected 'type' (T_STRING) in /webpages/ezcookingcsut/public_html/application/views/post.php on line 45
+[26-Mar-2017 19:33:23 Europe/Tallinn] PHP Parse error:  syntax error, unexpected 'Id' (T_STRING) in /webpages/ezcookingcsut/public_html/application/views/post.php on line 44
+[26-Mar-2017 19:33:34 Europe/Tallinn] PHP Parse error:  syntax error, unexpected 'xml' (T_STRING) in /webpages/ezcookingcsut/public_html/application/views/post.php on line 44
+[26-Mar-2017 19:36:59 Europe/Tallinn] PHP Parse error:  syntax error, unexpected 'version' (T_STRING) in /webpages/ezcookingcsut/public_html/application/views/post.php on line 45
+[26-Mar-2017 19:39:18 Europe/Tallinn] PHP Parse error:  syntax error, unexpected 'type' (T_STRING) in /webpages/ezcookingcsut/public_html/application/views/post.php on line 46
+[26-Mar-2017 19:51:18 Europe/Tallinn] PHP Fatal error:  Class 'XSLTProcessor' not found in /webpages/ezcookingcsut/public_html/application/views/post.php on line 55
+[26-Mar-2017 19:51:26 Europe/Tallinn] PHP Fatal error:  Class 'XSLTProcessor' not found in /webpages/ezcookingcsut/public_html/application/views/post.php on line 55
+[26-Mar-2017 20:18:50 Europe/Tallinn] PHP Parse error:  syntax error, unexpected 'var' (T_VAR) in /webpages/ezcookingcsut/public_html/application/models/Post_model.php on line 11
+[26-Mar-2017 20:26:29 Europe/Tallinn] PHP Fatal error:  Call to undefined function array_to_xml() in /webpages/ezcookingcsut/public_html/application/models/Post_model.php on line 17
+[26-Mar-2017 20:29:45 Europe/Tallinn] PHP Parse error:  syntax error, unexpected '$k' (T_VARIABLE) in /webpages/ezcookingcsut/public_html/application/models/Post_model.php on line 17
+[26-Mar-2017 20:41:12 Europe/Tallinn] PHP Fatal error:  Class 'XSLTProcessor' not found in /webpages/ezcookingcsut/public_html/application/views/post.php on line 37
+[26-Mar-2017 20:46:50 Europe/Tallinn] PHP Fatal error:  Class 'XSLTProcessor' not found in /webpages/ezcookingcsut/public_html/application/views/post.php on line 37
+[26-Mar-2017 20:58:52 Europe/Tallinn] PHP Parse error:  syntax error, unexpected '}' in /webpages/ezcookingcsut/public_html/application/controllers/Login.php on line 59
+[26-Mar-2017 20:58:52 Europe/Tallinn] PHP Parse error:  syntax error, unexpected '}' in /webpages/ezcookingcsut/public_html/application/controllers/Login.php on line 59
+[26-Mar-2017 20:58:53 Europe/Tallinn] PHP Parse error:  syntax error, unexpected '}' in /webpages/ezcookingcsut/public_html/application/controllers/Login.php on line 59
+[26-Mar-2017 20:58:54 Europe/Tallinn] PHP Parse error:  syntax error, unexpected '}' in /webpages/ezcookingcsut/public_html/application/controllers/Login.php on line 59
+[26-Mar-2017 21:00:11 Europe/Tallinn] PHP Parse error:  syntax error, unexpected '}' in /webpages/ezcookingcsut/public_html/application/controllers/Login.php on line 61
+[26-Mar-2017 21:00:12 Europe/Tallinn] PHP Parse error:  syntax error, unexpected '}' in /webpages/ezcookingcsut/public_html/application/controllers/Login.php on line 61
+[26-Mar-2017 21:00:14 Europe/Tallinn] PHP Parse error:  syntax error, unexpected '}' in /webpages/ezcookingcsut/public_html/application/controllers/Login.php on line 61
+[26-Mar-2017 21:00:35 Europe/Tallinn] PHP Parse error:  syntax error, unexpected '}' in /webpages/ezcookingcsut/public_html/application/controllers/Login.php on line 61
+[26-Mar-2017 21:00:37 Europe/Tallinn] PHP Parse error:  syntax error, unexpected '}' in /webpages/ezcookingcsut/public_html/application/controllers/Login.php on line 61
+[26-Mar-2017 21:08:11 Europe/Tallinn] PHP Parse error:  syntax error, unexpected '=' in /webpages/ezcookingcsut/public_html/application/models/Post_model.php on line 14
+[26-Mar-2017 21:09:27 Europe/Tallinn] PHP Fatal error:  Call to undefined method User::updLastSeen() in /webpages/ezcookingcsut/public_html/application/controllers/Login.php on line 57
+[26-Mar-2017 22:08:52 Europe/Tallinn] PHP Parse error:  syntax error, unexpected end of file in /webpages/ezcookingcsut/public_html/application/views/search.php on line 40
+[26-Mar-2017 22:32:09 Europe/Tallinn] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO) in /webpages/ezcookingcsut/public_html/application/views/search.php on line 9

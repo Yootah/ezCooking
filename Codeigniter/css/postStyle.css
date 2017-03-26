@@ -8,3 +8,7 @@ img.media-object#avatar {
 h4, h5, p {
 	margin-left: 10px;
 }
+
+small#posted_on{
+	font-style: italic;
+}

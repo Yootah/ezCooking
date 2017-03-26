@@ -3,6 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Post extends CI_Controller {
 
+	function __construct() {
+		parent:: __construct();
+		$this->load->model('Post_model', '', TRUE);
+	}
+
 	/**
 	 * Index Page for this controller.
 	 *
@@ -20,10 +25,12 @@ class Post extends CI_Controller {
 	 */
 	public function index()
 	{
-		//$this->load->view('first');
 		$title['title'] = 'Post';
 		$this->load->view('navigation', $title); // DO NOT CHANGE
-		$this->load->view('post'); //
+		
+		$data['xmlstr'] = $this->Post_model->getPostArray();
+		$this->load->view('post', $data);
 		$this->load->view('footer'); // DO NOT CHANGE
 	}
+	
 }

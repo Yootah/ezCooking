@@ -3,7 +3,8 @@
 <td class = "td_action_bar">
 	<h2>Actions</h2>
 	<br><br><br>
-	<a href="./post"><button>Random Post</button></a>
+	<input type="button" value="Random" onclick="location.href='./post';" />
+	
 </td>
 <td class= "td_borders"></td>
 </tr>
