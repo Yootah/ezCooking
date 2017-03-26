@@ -4,8 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<head><meta http-equiv="Content-Type" content="text/html; charset=euc-jp">
+	
 	
 	<?php 
     if(isset($title)){
@@ -17,6 +17,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<link rel="stylesheet" href="./css/bootstrap.min.css"  type="text/css" />
 	<link rel="stylesheet" href="./css/theme1.css"  type="text/css" /> 
 	<link rel="stylesheet" href="./css/dropdown.css"  type="text/css" /> 
+	<link rel="stylesheet" href="./css/postStyle.css"  type="text/css" /> 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
 	<script src="./js/dropdown.js"></script>
@@ -41,7 +42,7 @@ table, th, td {
     <table width="100%">
 	<tr>
 	<td>
-			<a href="./welcome"><img src = "./images/logo.png" width="100" height="100"></a>
+			<a href="./welcome"><img src = "./images/logo.png" width="100" height="100" alt="ezCooking logo"></a>
 	</td>
 	<td>
 			<!-- Hamburger icon -->
