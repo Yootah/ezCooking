@@ -5,6 +5,7 @@ class Login extends CI_Controller {
 	function __construct() {
 		parent:: __construct();
 		$this->load->model('user', '', TRUE);
+		$this->load->model('Random_post_model', '', TRUE);
 	}
 
 	/**
@@ -39,9 +40,11 @@ class Login extends CI_Controller {
 			$this->load->view('login');
 		}
 		else {
-			redirect('welcome');
+			$_SESSION['username']=$this->input->post('username');
+			redirect('profile');
 		}
-		$this->load->view('footer'); // DO NOT CHANGE
+		$data['rand'] = $this->Random_post_model->getRandomID();
+		$this->load->view('footer', $data);
 	}
 	
 	function check_database($password) {

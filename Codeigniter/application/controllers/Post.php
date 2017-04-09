@@ -6,6 +6,7 @@ class Post extends CI_Controller {
 	function __construct() {
 		parent:: __construct();
 		$this->load->model('Post_model', '', TRUE);
+		$this->load->model('Random_post_model', '', TRUE);
 	}
 
 	/**
@@ -23,14 +24,29 @@ class Post extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
+	public function index($postid)
 	{
-		$title['title'] = 'Post';
+		if(!isset($postid) || count($postid)==0){
+			redirect('welcome');
+		}
+
+		$data['xmlstr'] = $this->Post_model->getPostArray($postid);
+		$data['postData'] = $this->Post_model->getPostData($postid);
+
+		if ($data['postData']==null ){
+			redirect('welcome');
+		}
+
+		$title['title'] = $data['postData']['recipe_title'];
 		$this->load->view('navigation', $title); // DO NOT CHANGE
-		
-		$data['xmlstr'] = $this->Post_model->getPostArray();
 		$this->load->view('post', $data);
-		$this->load->view('footer'); // DO NOT CHANGE
+		$data['rand'] = $this->Random_post_model->getRandomID();
+		$this->load->view('footer', $data);
 	}
-	
+
+	function _remap($param) {
+        	$this->index($param);
+    }
+
 }
+?>

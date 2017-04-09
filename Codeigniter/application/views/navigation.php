@@ -14,24 +14,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     	echo "<title>Tiitli muutuja tyhi</title>";
 	}
     ?>
-	<link rel="stylesheet" href="./css/bootstrap.min.css"  type="text/css" />
-	<link rel="stylesheet" href="./css/theme1.css"  type="text/css" /> 
-	<link rel="stylesheet" href="./css/dropdown.css"  type="text/css" /> 
-	<link rel="stylesheet" href="./css/postStyle.css"  type="text/css" /> 
-	<link rel="stylesheet" href="./css/ingr_table.css"  type="text/css" /> 
+	<link rel="stylesheet" href="<? echo base_url() ?>css/bootstrap.min.css"  type="text/css" />
+	<link rel="stylesheet" href="<? echo base_url() ?>css/theme1.css"  type="text/css" /> 
+	<link rel="stylesheet" href="<? echo base_url() ?>css/dropdown.css"  type="text/css" /> 
+	<link rel="stylesheet" href="<? echo base_url() ?>css/postStyle.css"  type="text/css" />
 	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script src="./js/bootstrap.min.js"></script>
-	<script src="./js/dropdown.js"></script>
-	<script src="./js/newPostScript.js"></script>
+	<script src="<? echo base_url() ?>js/bootstrap.min.js"></script>
+	<script src="<? echo base_url() ?>js/dropdown.js"></script>
+	<script src="<? echo base_url() ?>js/newPostScript.js"></script>
+	<script src="<? echo base_url() ?>js/post_search.js"></script>	
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjb1xr0GjkW66pZ7wD2DevRU0kYCyecvk&callback=myMap"></script>
+	<script type='text/javascript'>var php_NEWS_TO_SHOW = <? echo NEWS_TO_SHOW ?></script>
+	<script src="<?php echo base_url(); ?>js/loadMoreNews.js"></script>
 	
-
-<!-- <style>
-table, th, td {
-    border: 1px solid black;
-    padding: 5px;
-}
-</style> -->
 
 </head>
 <body>
@@ -44,7 +40,7 @@ table, th, td {
 	    <table>
 	<tr>
 	<td>
-			<a href="./welcome"><img src = "./images/logo.png" width="100" height="100" alt="ezCooking logo"></a>
+			<a href="<? echo base_url() ?>welcome"><img src = "<? echo base_url() ?>images/logo.png" width="100" height="100" alt="ezCooking logo"></a>
 	</td>
 	<td>
 			<!-- Hamburger icon -->
@@ -59,21 +55,27 @@ table, th, td {
 	        <!-- Menu Items-->
 	        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	            <ul class="nav navbar-nav">
-					<!-- <li><a href="" class="navbar-brand">Uudised</a></li> -->
-					<!--
 					
-					<li class="all"><a href="./welcome">News</a></li>
-					-->
-					<li onclick="myFunction()" class="dropbtn dropdown" id="newsButton">News
-					<div id="myDropdown" class="dropdown-content">
-						<a href="./welcome">Hot</a>
-						<a href="./subbed">Subs</a>
-						</div>
-						</li>
-	                <li class="all"><a href="./search">Search</a></li>
-	                <li class="all"><a href="./login">Log in</a></li>
-	                <li class="all"><a href="./register">Register</a></li>
-	                <li class="all"><a href="./aboutus">About us</a></li>
+					<?php
+					if (isset($_SESSION['logged_in'])) {
+						echo '<li onclick="myFunction()" class="dropbtn dropdown" id="newsButton">' . lang("menu_news") . '<div id="myDropdown" class="dropdown-content">
+							<a href="' . base_url() . 'welcome' . '">'. lang("menu_hot") . '</a>
+							<!-- <a href="' . base_url() . 'subbed' . '">' . lang("menu_subs") . '</a> --></div></li>';
+						echo '<li class="all"><a href="' . base_url() . 'profile' . '">' . lang("menu_profile") . '</a></li>';
+						echo '<li class="all"><a href="' . base_url() . 'logout' . '">' . lang("menu_logout") . '</a></li>';
+					}
+					else {
+						echo '<li class="all"><a href="' . base_url() . 'welcome' . '">' . lang("menu_news") . '</li>';
+						echo '<li class="all"><a href="' . base_url() . 'login' . '">' . lang("menu_login") . '</a></li>';
+						echo '<li class="all"><a href="' . base_url() . 'register' . '">' . lang("menu_register") . '</a></li>';
+					}
+					?>
+	                <li class="all"><a href="./search"><?php echo lang("menu_search"); ?></a></li>
+					<li class="all"><a href="<? echo base_url() ?>sitemap"><?php echo lang("sitemap_title"); ?></a></li>
+	                
+	                <li class="all"><a href="<? echo base_url() ?>aboutus"><?php echo lang("menu_aboutus"); ?></a></li>
+					<li><a href="<?php echo base_url(); ?>index.php/welcome/changeLanguage/estonian"><img class="img" alt="estonian flag" src="<?php echo base_url(); ?>images/est.png"/></a></li>
+					<li><a href="<?php echo base_url(); ?>index.php/welcome/changeLanguage/english"><img class="img" alt="union jack" src="<?php echo base_url(); ?>images/gb.png"/></a></li>
 	            </ul>
 	        </div>
 	</td></tr></table>
@@ -86,25 +88,4 @@ table, th, td {
 <td class= "td_borders"></td>
 <td class= "td_body">
 	
-<script>
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
 
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
-</script>

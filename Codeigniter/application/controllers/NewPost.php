@@ -3,6 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class NewPost extends CI_Controller {
 
+	function __construct() {
+		parent:: __construct();
+		$this->load->model('Random_post_model', '', TRUE);
+	}
+
 	/**
 	 * Index Page for this controller.
 	 *
@@ -23,6 +28,7 @@ class NewPost extends CI_Controller {
 		$title['title'] = 'New Post';
 		$this->load->view('navigation', $title); // DO NOT CHANGE
 		$this->load->view('newpost'); //
-		$this->load->view('footer'); // DO NOT CHANGE
+		$data['rand'] = $this->Random_post_model->getRandomID();
+		$this->load->view('footer', $data);
 	}
 }

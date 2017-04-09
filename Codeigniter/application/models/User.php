@@ -30,7 +30,9 @@ Class User extends CI_Model {
 				'PW' => MD5($password),
 				'Email' => $email
 				);
-			$this->db->insert('Users', $data);
+			//$this->db->insert('Users', $data);
+			$password = MD5($password);
+			$this->db->query("call sp_register('$username', '$password', '$email')");
 			return TRUE;
 		}
 		else {

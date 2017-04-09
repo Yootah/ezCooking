@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
+?>
 
 	<h1>Creating a new post</h1>
 	<form action="http://ezcooking.cs.ut.ee/newPost/addRecipe" method="post" accept-charset="utf-8" class="form-horizontal">

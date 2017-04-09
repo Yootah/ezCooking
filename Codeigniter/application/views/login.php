@@ -1,67 +1,39 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-?><!DOCTYPE html>
+?>
 
 <div class="col-sm-offset-2 col-sm-10">
-<h1> Welcome Back! </h1>
+<h1> <? echo lang('login_title') ?> </h1>
 </div>
 <div>
 	<?php echo validation_errors(); ?>
 	<?php echo form_open('login'); ?>
 		<div class="col-sm-offset-2 col-sm-10">
-			<label class="control-label col-sm-2" for='username'>Username:</label>
-			<input type='text' class="form-control" size='20' id='username' placeholder="Username" name='username'/>
+			<label class="control-label col-md-2" for='username'><?php echo lang("login_username"); ?></label>
+			<input type='text' class="form-control" id="username" name="username" placeholder="<?php echo lang('login_field_username'); ?>"/>
 			<br/>
-			<label class="control-label col-sm-2" for='password'>Password:</label>
-			<input type='password' class="form-control" size='20' id='password' placeholder="Password" name='password'/>
+			<label class="control-label col-md-2" for='password'><?php echo lang("login_password"); ?></label>
+			<input type='password' class="form-control" id='password' name="password" placeholder='<?php echo lang("login_field_password"); ?>'/>
 			<br/>
 			<table>
 			<tr>
 				<td>
-					<input type='submit' value='Login'/>
+					<input type='submit' value='<?php echo lang("login_button_log_in"); ?>'/>
 				</td>
 				<td>
-					<label><input type="checkbox"> Remember me</label>
+					<label><input type="checkbox"><?php echo lang("login_checkbox"); ?></label>
 				</td>
-				<td align="right">
-					<button type="button" class="btn btn-link">Forgot your password?</button>
+				<td>
+					<button type="button" class="btn btn-link"><?php echo lang("login_forgot"); ?></button>
 				</td>
 			</tr>
 			</table>
 		</div>
 	</form>
-	<!-- <div class="form-group">
-		<label class="control-label col-sm-2" for="email">Username:</label>
-		<div class="col-sm-10">
-			<input type="username" class="form-control" id="username" placeholder="Enter username" required>
-		</div>
-	</div>
-	<div class="form-group">
-		<label class="control-label col-sm-2" for="pwd">Password:</label>
-		<div class="col-sm-10"> 
-			<input type="password" class="form-control" id="pwd" placeholder="Enter password" required>
-		</div>
-	</div>
-	<div class="form-group"> 
-		<div class="col-sm-offset-2 col-sm-10">
-			<div class="checkbox">
-				<label><input type="checkbox"> Remember me</label>
-			</div>
-		</div>
-	</div>
-	<div class="form-group"> 
-		<div class="col-sm-offset-2 col-sm-10">
-			<button type="login" class="btn btn-default">Log in</button>
-		</div>
-	</div>
-	</form>
 	<div class="col-sm-offset-2 col-sm-10">
-		<button type="button" class="btn btn-link">Forgot your password?</button>
-	</div>  -->
-	<div class="col-sm-offset-2 col-sm-10">
-		<h2> Or log in via: </h2>
-		<p>Work in progress :S </p>
+		<h2> <?php echo lang("login_alter_login"); ?> </h2>
+		<p> <?php echo lang("login_tba"); ?> </p>
 	</div>
 </div>
 <!-- </form> -->

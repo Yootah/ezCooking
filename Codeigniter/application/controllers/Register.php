@@ -5,6 +5,7 @@ class Register extends CI_Controller {
 	function __construct() {
 		parent:: __construct();
 		$this->load->model('user', '', TRUE);
+		$this->load->model('Random_post_model', '', TRUE);
 	}
 
 	public function index()
@@ -28,7 +29,8 @@ class Register extends CI_Controller {
 		else {
 			redirect('welcome');
 		}
-		$this->load->view('footer');
+		$data['rand'] = $this->Random_post_model->getRandomID();  // RANDOM BUTTON DATA
+		$this->load->view('footer', $data); // DO NOT CHANGE
 		
 		
 	}

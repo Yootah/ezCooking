@@ -1,9 +1,24 @@
-img.media-object#recept {
+.media-object.news_pic {
+	width: 100px;
+}
+
+.media-object#recipe_pic {
 	width: 180px;
 }
 
-img.media-object#avatar {
+
+
+td.newspost-title {
+	font-weight: bold;
+}
+
+em.newspost-descr {
+	font-weight: normal;
+}
+
+#avatar.media-object {
 	width: 60px;
+	height: 60px;
 }
 h4, h5, p {
 	margin-left: 10px;
@@ -12,3 +27,4 @@ h4, h5, p {
 small#posted_on{
 	font-style: italic;
 }
+

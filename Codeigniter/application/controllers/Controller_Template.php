@@ -3,6 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class First extends CI_Controller {
 
+	function __construct() {
+		parent:: __construct();
+		$this->load->model('Random_post_model', '', TRUE);
+	}
+
 	/**
 	 * Index Page for this controller.
 	 *
@@ -24,6 +29,7 @@ class First extends CI_Controller {
 		$title['title'] = 'Page Title';
 		$this->load->view('navigation', $title); // DO NOT CHANGE
 		$this->load->view('view name here'); //
-		$this->load->view('footer'); // DO NOT CHANGE
+		$data['rand'] = $this->Random_post_model->getRandomID();  // RANDOM BUTTON DATA
+		$this->load->view('footer', $data); // DO NOT CHANGE
 	}
 }

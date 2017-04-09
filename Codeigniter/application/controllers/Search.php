@@ -2,6 +2,10 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Search extends CI_Controller {
+	function __construct() {
+		parent:: __construct();
+		$this->load->model('Random_post_model', '', TRUE);
+	}
 
 	/**
 	 * Index Page for this controller.
@@ -26,15 +30,22 @@ class Search extends CI_Controller {
 		$this->load->view('navigation', $title); // DO NOT CHANGE
 		$data['db_resp'] = null;
 		$this->load->view('search', $data); //
-		$this->load->view('footer'); // DO NOT CHANGE
+		$data['rand'] = $this->Random_post_model->getRandomID();
+		$this->load->view('footer', $data); // DO NOT CHANGE
 	}
 	
-	public function show_search($search){
+	public function show_search(){
+		$search = $this->input->post('search');
 		$this->load->model("Search_model");
-		$search_data['db_resp']=$this->Search_model->getSearchArray($search);
+		$data['db_resp']=$this->Search_model->getSearchArray($search);
+		
+		if (count($data['db_resp'])>0) {
+			echo $this->load->view('searchresults',$data, TRUE);
+		}
+		else echo "No posts found, sry wrong litterbox";
+		
 		$title['title'] = 'Search';
-		$this->load->view('navigation', $title); // DO NOT CHANGE
-		$this->load->view('search',$search_data);
-		$this->load->view('footer'); // DO NOT CHANGE
+		
+		
 	}
 }

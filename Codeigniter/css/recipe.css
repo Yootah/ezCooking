@@ -1,0 +1,19 @@
+@namespace ingr "http://ezcooking.cs.ut.ee/ns/ingr";
+
+ingr:table {
+	width: 100%;
+}
+
+ingr:row {
+	border: solid;
+	display: table-row;
+	width: 100%;
+	
+	
+}
+ingr:cell {
+	display: table-cell;
+	margin: 15px;
+	padding: 15px;
+	text-align: center;
+}
