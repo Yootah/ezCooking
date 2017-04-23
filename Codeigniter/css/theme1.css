@@ -121,12 +121,7 @@ li.vastus{
 #showLess:hover {
     color: black;
 }
-h3{
-	text-align: center;
-}
-h2{
-	text-align: center;
-}
+
 .categoryButton.btn{
     margin-bottom: 10px;
     background-color: #f8f8f8;

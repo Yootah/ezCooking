@@ -18,15 +18,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<link rel="stylesheet" href="<? echo base_url() ?>css/theme1.css"  type="text/css" /> 
 	<link rel="stylesheet" href="<? echo base_url() ?>css/dropdown.css"  type="text/css" /> 
 	<link rel="stylesheet" href="<? echo base_url() ?>css/postStyle.css"  type="text/css" />
+	<link rel="stylesheet" href="<? echo base_url() ?>css/navigation.css"  type="text/css" />
 	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="<? echo base_url() ?>js/bootstrap.min.js"></script>
 	<script src="<? echo base_url() ?>js/dropdown.js"></script>
 	<script src="<? echo base_url() ?>js/newPostScript.js"></script>
-	<script src="<? echo base_url() ?>js/post_search.js"></script>	
+		
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjb1xr0GjkW66pZ7wD2DevRU0kYCyecvk&callback=myMap"></script>
 	<script type='text/javascript'>var php_NEWS_TO_SHOW = <? echo NEWS_TO_SHOW ?></script>
 	<script src="<?php echo base_url(); ?>js/loadMoreNews.js"></script>
+	<script type="text/javascript" src="<? echo base_url() ?>js/jquery.history.js"></script>
 	
 
 </head>
@@ -57,25 +59,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	            <ul class="nav navbar-nav">
 					
 					<?php
+					echo '<li class="all"><a href="' . base_url() . 'welcome' . '">' . lang("menu_news") . '</a></li>';
 					if (isset($_SESSION['logged_in'])) {
-						echo '<li onclick="myFunction()" class="dropbtn dropdown" id="newsButton">' . lang("menu_news") . '<div id="myDropdown" class="dropdown-content">
-							<a href="' . base_url() . 'welcome' . '">'. lang("menu_hot") . '</a>
-							<!-- <a href="' . base_url() . 'subbed' . '">' . lang("menu_subs") . '</a> --></div></li>';
+						//echo '<li onclick="myFunction()" class="dropbtn dropdown" id="newsButton">' . lang("menu_news") . '<div id="myDropdown" class="dropdown-content">
+						//	<a href="' . base_url() . 'welcome' . '">'. lang("menu_hot") . '</a></li>';
 						echo '<li class="all"><a href="' . base_url() . 'profile' . '">' . lang("menu_profile") . '</a></li>';
 						echo '<li class="all"><a href="' . base_url() . 'logout' . '">' . lang("menu_logout") . '</a></li>';
 					}
 					else {
-						echo '<li class="all"><a href="' . base_url() . 'welcome' . '">' . lang("menu_news") . '</li>';
+						
 						echo '<li class="all"><a href="' . base_url() . 'login' . '">' . lang("menu_login") . '</a></li>';
 						echo '<li class="all"><a href="' . base_url() . 'register' . '">' . lang("menu_register") . '</a></li>';
 					}
 					?>
+					<!--<li class="all"><a href="./annetus"><? echo lang('menu_donation') ?></a></li>-->
 	                <li class="all"><a href="./search"><?php echo lang("menu_search"); ?></a></li>
 					<li class="all"><a href="<? echo base_url() ?>sitemap"><?php echo lang("sitemap_title"); ?></a></li>
 	                
 	                <li class="all"><a href="<? echo base_url() ?>aboutus"><?php echo lang("menu_aboutus"); ?></a></li>
 					<li><a href="<?php echo base_url(); ?>index.php/welcome/changeLanguage/estonian"><img class="img" alt="estonian flag" src="<?php echo base_url(); ?>images/est.png"/></a></li>
 					<li><a href="<?php echo base_url(); ?>index.php/welcome/changeLanguage/english"><img class="img" alt="union jack" src="<?php echo base_url(); ?>images/gb.png"/></a></li>
+					<li><a href = "" data-toggle = "tooltip" data-placement = "right" title = "<?php echo lang('language_change_help'); ?>"><img class="img" alt="#" src="<?php echo base_url(); ?>images/emark.png"/></a></li>
 	            </ul>
 	        </div>
 	</td></tr></table>

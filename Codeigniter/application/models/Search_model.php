@@ -16,6 +16,13 @@ class Search_model extends CI_Model {
 		$query = $this -> db -> get();
 		$arr = $query->result_array();
 		return $arr;
-	}	
+	}
+	
+	public function searchAuth($auth) {
+	    $this -> db -> from("view_recipe_search where lower(author) like '%" . $auth . "'%");
+		$query = $this -> db -> get();
+		$arr = $query->result_array();
+		return $arr;
+	}
 }
 ?>

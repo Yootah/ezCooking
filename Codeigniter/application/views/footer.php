@@ -2,9 +2,25 @@
 <? if (isset($rand)) { $id=$rand[array_rand($rand)]['ID']; } ?>
 <td class = "td_blank_area"></td>
 <td class = "td_action_bar">
-	<h2><?php echo lang("footer_actions"); ?></h2>
-	<br><br><br>
-	<input type="button" class="btn btn-info" value='<?php echo lang("footer_random"); ?>' onclick="location.href='<? echo base_url() ?>post/<? echo $id ?>';" />
+	<h2><?php echo lang("footer_actions"); ?><a href = "" data-toggle = "tooltip" data-placement = "right" title = "<?php echo lang('footer_help'); ?>"><img class="img" alt="#" src="<?php echo base_url(); ?>images/qmark.png"/></a></h2>
+    <table>
+	<? 
+	    if (isset($_SESSION['logged_in'])) {
+    ?> 
+    
+	        <br><br>
+	        <tr>
+	        <td><input type="button" class="btn btn-info sidebar-button" value="<? echo lang('footer_new_post'); ?>" onclick="location.href='<? echo base_url() ?>newPost/'" /> </td>
+	        <td><a href = "" data-toggle = "tooltip" data-placement = "right" title = "<?php echo lang('footer_new_post_help'); ?>"><img class="img qmark-footer" alt="#" src="<?php echo base_url(); ?>images/qmark.png"/></a></td>
+	        </tr>
+    <?
+	    }
+	?>
+	<tr>
+	        <td><input type="button" class="btn btn-info sidebar-button" value='<?php echo lang("footer_random"); ?>' onclick="location.href='<? echo base_url() ?>post/<? echo $id ?>';" /></td>
+	        <td><a href = "" data-toggle = "tooltip" data-placement = "right" title = "<?php echo lang('footer_random_post_help'); ?>"><img class="img qmark-footer" alt="#" src="<?php echo base_url(); ?>images/qmark.png"/></a></td>
+	        </tr>
+	 </table>
 	
 </td>
 <td class= "td_borders"></td>

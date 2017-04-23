@@ -6,6 +6,7 @@ class NewPost extends CI_Controller {
 	function __construct() {
 		parent:: __construct();
 		$this->load->model('Random_post_model', '', TRUE);
+		$this->load->model('NewPost_model', '', TRUE);
 	}
 
 	/**
@@ -25,10 +26,22 @@ class NewPost extends CI_Controller {
 	 */
 	public function index()
 	{
+	    if (!isset($_SESSION['logged_in'])){
+	        redirect("Welcome");
+	    }
 		$title['title'] = 'New Post';
 		$this->load->view('navigation', $title); // DO NOT CHANGE
 		$this->load->view('newpost'); //
 		$data['rand'] = $this->Random_post_model->getRandomID();
 		$this->load->view('footer', $data);
+	}
+	
+	public function submit_recipe(){
+	    $pdata = $this->input->post();
+	    $recid = $this->NewPost_model->createRecipe($pdata);
+	    $this->NewPost_model->saveIngredients($pdata, $recid);
+	    $this->NewPost_model->saveSteps($pdata, $recid);
+	    redirect("post/".$recid);
+	    
 	}
 }

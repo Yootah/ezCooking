@@ -7,7 +7,6 @@
 }
 
 
-
 td.newspost-title {
 	font-weight: bold;
 }
@@ -27,4 +26,58 @@ h4, h5, p {
 small#posted_on{
 	font-style: italic;
 }
+
+ol.step-list {
+    counter-reset: li; /* Initiate a counter */
+	margin-left: 0; /* Remove the default left margin */
+	padding-left: 0; /* Remove the default left padding */
+}
+
+ol.step-list > li {
+    background-color: #dedede;
+    border-radius: 0px 15px 15px 0px;
+	position: relative; /* Create a positioning context */
+	margin: 15px; /* Give each list item a left margin to make room for the numbers */
+	margin-top: 15px;
+	margin-bottom: 19px;
+	margin-left: 40px;
+	padding: 10px; /* Add some spacing around the content */
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 30px;
+	list-style: none; /* Disable the normal item numbering */
+	font-size: 16px;
+}
+
+ol.step-list > li:before {
+    border-radius: 15px 0px 0px 15px;
+	content: counter(li); /* Use the counter as content */
+	counter-increment: li; /* Increment the counter by 1 */
+	
+	    /* Position and style the number */
+	position:absolute;
+	top:-2px;
+	left:-2em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	width:2em;
+	/* Some space between the number and the content in browsers that support
+	   generated content but not positioning it (Camino 2 is one example) */
+	margin-left:8px;
+	margin-right: 10px;
+	margin-top: 2px;
+	padding:4px;
+	padding-top: 7px;
+	padding-bottom: 8px;
+	color:#fff;
+	background:#b8b8b8;
+	font-weight:bold;
+	font-family: "Helvetica Neue", Arial, sans-serif;
+	font-size: 26px;
+	text-align:center;
+}
+li.step ol.step-list,
+li.step ul.step-list {margin-top:6px;}
+ol.step-list li.step:last-child {margin-bottom:0;}
 

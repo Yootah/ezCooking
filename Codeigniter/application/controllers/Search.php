@@ -36,9 +36,9 @@ class Search extends CI_Controller {
 	
 	public function show_search(){
 		$search = $this->input->post('search');
+		$author = $this->input->post('author');
 		$this->load->model("Search_model");
 		$data['db_resp']=$this->Search_model->getSearchArray($search);
-		
 		if (count($data['db_resp'])>0) {
 			echo $this->load->view('searchresults',$data, TRUE);
 		}

@@ -11,12 +11,17 @@ $lang['menu_logout'] = 'Logi välja';
 $lang['menu_register'] = 'Registreeru';
 $lang['menu_aboutus'] = 'Meist';
 $lang['menu_profile'] = 'Profiil';
+$lang['menu_donation'] = "Annetus";
 $lang["language_change_help"] = "NB! Keelevahetus viib sind pealehele!";
 
 // Footer
 $lang['footer_quote'] = '"15 nädalat probleeme"';
 $lang['footer_actions'] = 'Tegevused';
 $lang['footer_random'] = 'Juhuslik postitus';
+$lang['footer_new_post'] = 'Uus postitus';
+$lang['footer_help'] = "Proovi neid nuppe!";
+$lang['footer_new_post_help']="Jaga oma retsepti maailmaga!";
+$lang['footer_random_post_help']="Kui ei tea täpselt, mida tahad!";
 
 // Main page (table of news)
 $lang['main_title'] = 'Viimased uudised';
@@ -78,16 +83,29 @@ $lang['register_alter_login'] = 'Sinu pilt';
 $lang['register_tba'] = 'Tuleb varsti!';
 
 // Post
-$land['post_ingredients'] = 'Koostisosad';
-$land['post_author'] = 'Autor: ';
-$land['post_posted_on'] = 'Postitatud: ';
-$land['post_eta'] = 'Kaalutud aeg: ';
-$land['post_category'] = 'Kategooria: ';
-$land['post_table_amount'] = 'Kogus';
-$land['post_table_name'] = 'Nimi';
-$land['post_table_manufacturer'] = 'Tootja';
-$land['post_steps'] = 'Sammud';
-$land['post_button_sub'] = 'Telli antud kategooriast!';
+$lang['post_ingredients'] = 'Koostisosad';
+$lang['post_author'] = 'Autor: ';
+$lang['post_posted_on'] = 'Postitatud: ';
+$lang['post_eta'] = 'Aega kulub';
+//$land['post_category'] = 'Kategooria: ';
+//$land['post_table_name'] = 'Nimi';
+$lang['post_steps'] = 'Sammud';
+//$land['post_button_sub'] = 'Telli antud kategooriast!';
+$lang['post_recp_nameing'] = 'Anna oma retseptile nimi';
+$lang['post_recp_length'] = 'Kaua see võtab aega? nt. 0:10:0 tähendab 10 minutit';
+$lang['post_recp_create_new'] = 'Loo uus postitus';
+$lang['post_recp_amount'] = 'Kogus';
+$lang['post_recp_unit'] = 'Ühik';
+$lang['post_recp_manufacturer'] = 'Tootja';
+$lang['post_recp_type'] = 'Nimi';
+$lang['post_recp_addingr'] = 'Vajuta koostisosade lisamiseks';
+$lang['post_recp_addsteps'] = 'Vajuta sammude lisamiseks';
+$lang['post_recp_desc'] = 'Kirjelda sammu, aga lühidalt';
+$lang['post_recp_image'] = 'Pilt';
+$lang['post_recp_imageurl'] = 'Pildi link';
+$lang['post_recp_shortdesc'] = 'Lühikirjeldus';
+$lang['post_recp_shortdescdesc'] = 'Kirjuta lühike kirjeldus, mida näidatakse avalehel!';
+$lang['post_me'] = 'Postita mind!';
 
 //Sitemap
 $lang['sitemap_title'] = "Sisukord";
@@ -101,11 +119,16 @@ $lang['posts_list'] = "Postituste lehed";
 $lang['post1_page_sm'] = "Postitus 1";
 $lang['post2_page_sm'] = "Postitus 2";
 $lang['post3_page_sm'] = "Postitus 3";
+$lang['post4_page_sm'] = "Postitus 4";
+$lang['post5_page_sm'] = "Postitus 5";
+$lang['sitemap_logged_in'] = "Sisse logitud";
+$lang['profile_page_sm'] = "Profiili leht";
 
 //Profile
 $lang["your_profile"] = "Sinu profiil";
 $lang["your_profile_greeting"] = "Tere, ";
 $lang["your_profile_help"] = "Varsti näed siin rohkem infot enda kohta!";
 $lang["your_profile_is_secret"] = "P.S. praegu on su profiilileht ülisalajane ;)";
-
+$lang["your_profile_recipe_count"] = "Sul on retsepte: ";
+$lang["your_profile_secret_help"] = "See tähendab, et seda näed ainult sina";
 ?>

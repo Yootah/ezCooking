@@ -21,9 +21,9 @@ class First extends CI_Controller {
 	public function index()
 	{
 		//$this->load->view('first');
-		$title['title'] = 'VRL - KKK';
+		$title['title'] = 'TÜHI LEHT';
 		$this->load->view('navigation', $title);	
-		$this->load->view('first');
+		$this->load->view('empty');
 		$this->load->view('footer');
 	}
 }

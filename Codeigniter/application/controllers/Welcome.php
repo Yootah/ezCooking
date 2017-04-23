@@ -58,4 +58,8 @@ class Welcome extends CI_Controller {
         $this->session->set_userdata('site_lang', $language);
 		redirect(base_url());
     	}
+    	
+    	public function info() {
+    		phpinfo();
+    	}
 }  

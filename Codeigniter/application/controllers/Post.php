@@ -30,10 +30,11 @@ class Post extends CI_Controller {
 			redirect('welcome');
 		}
 
-		$data['xmlstr'] = $this->Post_model->getPostArray($postid);
+		$data['xml'] = $this->Post_model->getPostArray($postid);
 		$data['postData'] = $this->Post_model->getPostData($postid);
+		$data['stepdata'] = $this->Post_model->getStepdata($postid);
 
-		if ($data['postData']==null ){
+		if ($data['postData']==null || $data['stepdata']==null){
 			redirect('welcome');
 		}
 

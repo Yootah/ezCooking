@@ -3,23 +3,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Post_model extends CI_Model {
 	public function getPostArray($id){
+		
 		$this -> db -> from("view_recipe_ingredients_amount");
 		$this -> db -> where("recipe_id",$id);
 		$query = $this -> db -> get();
-		$i = "http://ezcooking.cs.ut.ee/ns/ingr";
 		$arr = $query->result_array();
-		$xs = '<?xml version="1.0" encoding="UTF-8"?><root xmlns:ingr="'.$i.'"></root>';
-		$xmldata = new SimpleXMLElement($xs, null, false,$i);
-		$root = $xmldata ->addChild('table', null, $i);
-		$labelsNode = $root->addChild('row', null, $i);
-		$labelsNode ->addChild('label', 'Amount', $i);
-		$labelsNode ->addChild('label', 'Name', $i);
-		$labelsNode ->addChild('label', 'Manufacturer', $i);
+		
+		$xs = '<?xml version="1.0" encoding="UTF-8"?><root></root>';
+		$xmldata = new SimpleXMLElement($xs, null, false);
+		
+		$root = $xmldata ->addChild('table', null);
+		
+		$thead = $root -> addChild('thead', null);
+		
+		$labelsNode = $thead->addChild('tr', null);
+		$labelsNode ->addChild('th', 'Amount');
+		$labelsNode ->addChild('th', 'Name');
+		$labelsNode ->addChild('th', 'Manufacturer');
+		
+		$tbody = $root -> addChild('tbody', null);
+		
 		foreach($arr as $ingr) {
-			$rowNode = $root->addChild('row', null, $i);
-			$rowNode->addChild('cell', $ingr['amount_value'].' '.$ingr['unit'], $i);
-			$rowNode->addChild('cell', $ingr['name'], $i);
-			$rowNode->addChild('cell', $ingr['manufacturer'], $i);
+			$rowNode = $tbody->addChild('tr', null);
+			$rowNode->addChild('td', $ingr['amount'].' '.$ingr['unit']);
+			$rowNode->addChild('td', $ingr['name']);
+			$rowNode->addChild('td', $ingr['manufacturer']);
 		}
 		return $xmldata;
 	}
@@ -36,6 +44,19 @@ class Post_model extends CI_Model {
 		}
 		$myPost = array_values($query->result_array())[0];
 		return $myPost;
-	}	
+	}
+	
+	public function getStepdata($postid) {
+	    if (!is_numeric($postid)) {
+			return null;
+		}
+		$this -> db -> from('view_recipe_steps');
+		$this -> db -> where('recipe_id', $postid);
+		$query = $this -> db -> get();
+		if (count($query->result_array())==0) {
+			return null;
+		}
+		return $query->result_array();
+	}
 }
 ?>

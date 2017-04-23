@@ -6,6 +6,9 @@ class Profile extends CI_Controller {
 	function __construct() {
 		parent:: __construct();
 		$this->load->model('Random_post_model', '', TRUE);
+		$this->load->model('Profile_model', '', TRUE);
+        
+		
 	}
 
 	/**
@@ -29,9 +32,13 @@ class Profile extends CI_Controller {
 			redirect('welcome');
 		}
 		//$this->load->view('first');
-		$title['title'] = 'Page Title';
+		$title['title'] = "Your profile";
 		$this->load->view('navigation', $title); // DO NOT CHANGE
-		$this->load->view('profile'); //
+		
+        $profdata['n'] = $this->Profile_model->getPostNum();
+        $profdata['myrecipes'] = $this->Profile_model->getAllMyRecipes();
+		$this->load->view('profile', $profdata); //
+		
 		$data['rand'] = $this->Random_post_model->getRandomID();  // RANDOM BUTTON DATA
 		$this->load->view('footer', $data); // DO NOT CHANGE
 	}

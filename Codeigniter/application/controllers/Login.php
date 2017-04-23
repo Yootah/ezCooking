@@ -33,6 +33,7 @@ class Login extends CI_Controller {
 		
 		$this->load->helper(array('form','url'));
 		$this->load->library('form_validation');
+		//$this->load->library('facebook', array('appId' => '689990991209396', 'secret' => '23a44ae841fd77330630a21d8b36fa26'));
 		$this->form_validation->set_rules('username', 'Username', 'required');
 		$this->form_validation->set_rules('password', 'Password', 'required|callback_check_database',
 			array('required' => 'You must provide a %s.'));
