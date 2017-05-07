@@ -131,6 +131,14 @@ $lang["your_profile_help"] = "Soon you'll see more of your info here!";
 $lang["your_profile_is_secret"] = "P.S. your profile page is top secret atm ;)";
 $lang["your_profile_recipe_count"] = "Your recipe count: ";
 $lang["your_profile_secret_help"] = "Meaning that only you can see it";
+$lang['your_profile_postdel'] = "Delete Post!";
 
+//Donations
+$lang['donation_title'] = 'Donations';
+$lang['donation_top'] = 'Pls gib monies. Support ezCooking development team!';
+$lang['donation_text'] = 'By pressing this button, you agree to donate 12 EUR.';
+//$lang['donation_text'] = 'Please, write here, how much you would like to donate ';
+$lang['donation_button'] = 'Donate!';
+$lang['donation_tba'] = 'Customizable (and working) donation system will be introduced shortly.';
 
 ?>

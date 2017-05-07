@@ -26,6 +26,7 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
+	    
 		if(!isset($_SESSION)) { 
 			session_start();
 		}
@@ -62,4 +63,9 @@ class Welcome extends CI_Controller {
     	public function info() {
     		phpinfo();
     	}
+    	
+    public function check_news($latest_id) {
+        $id = $this -> News_model -> getNewestId();
+        $this->output->set_content_type('application/json')->set_output(json_encode($id));
+    }    	
 }  

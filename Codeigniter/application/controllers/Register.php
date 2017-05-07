@@ -27,7 +27,21 @@ class Register extends CI_Controller {
 			$this->load->view('register');
 		}
 		else {
-			redirect('welcome');
+		    /*$username = $this->input->post('username');
+		    $password = $this -> input ->post('password');
+		    $result = $this->user->login($username, $password);
+		    if($result) {
+    			$sess_array = array();
+    			foreach($result as $row) {
+    				$sess_array = array('username' => $row->username);
+    				$this->session->set_userdata('logged_in', $sess_array);
+    			}
+    			$_SESSION['username'] = $username;
+    			$this -> user -> updLastSeen($username);
+    			redirect('profile');
+    			
+		    }*/
+		    redirect('welcome');
 		}
 		$data['rand'] = $this->Random_post_model->getRandomID();  // RANDOM BUTTON DATA
 		$this->load->view('footer', $data); // DO NOT CHANGE

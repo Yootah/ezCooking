@@ -78,7 +78,7 @@ $lang['register_field_password'] = 'Parool';
 $lang['register_password_confirm'] = 'Kinnita parool: ';
 $lang['register_field_password_confirm'] = 'Parool uuesti';
 $lang['register_checkbox_notify'] = 'Saada teavitused mailile';
-$lang['register_button_log_in'] = 'Registreeru';
+$lang['register_button_register'] = 'Registreeru';
 $lang['register_alter_login'] = 'Sinu pilt';
 $lang['register_tba'] = 'Tuleb varsti!';
 
@@ -131,4 +131,14 @@ $lang["your_profile_help"] = "Varsti näed siin rohkem infot enda kohta!";
 $lang["your_profile_is_secret"] = "P.S. praegu on su profiilileht ülisalajane ;)";
 $lang["your_profile_recipe_count"] = "Sul on retsepte: ";
 $lang["your_profile_secret_help"] = "See tähendab, et seda näed ainult sina";
+$lang['your_profile_postdel'] = "Kustuta postitus!";
+
+//Donations
+$lang['donation_title'] = 'Annetused';
+$lang['donation_top'] = 'Toetage ezCooking tiimi!';
+$lang['donation_text'] = 'Nuppu vajutamisel te annetate 12 EUR meile!';
+//$lang['donation_text'] = 'Sisestage, kui palju tahate annetada: ';
+$lang['donation_button'] = 'Annetus!';
+$lang['donation_tba'] = 'Lähedas tulevikus lisame ka summa sisestamist ja muud seadeid!';
+
 ?>

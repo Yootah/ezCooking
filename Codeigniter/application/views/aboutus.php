@@ -9,4 +9,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div id="googleMap">
 <? echo $map['html'] ?>
 </div>
+<br><br><br><br><br>
+<li><a href="./donation">Donation!</a></li>
 </div>

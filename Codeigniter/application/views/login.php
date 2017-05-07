@@ -19,21 +19,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<table>
 			<tr>
 				<td>
-					<input type='submit' value='<?php echo lang("login_button_log_in"); ?>'/>
+					<input type='submit' class="btn btn-success" value='<?php echo lang("login_button_log_in"); ?>'/>
 				</td>
-				<td>
+				<!--<td>
 					<label><input type="checkbox"><?php echo lang("login_checkbox"); ?></label>
 				</td>
 				<td>
 					<button type="button" class="btn btn-link"><?php echo lang("login_forgot"); ?></button>
-				</td>
+				</td>-->
 			</tr>
 			</table>
 		</div>
 	</form>
 	<div class="col-sm-offset-2 col-sm-10">
 		<h2> <?php echo lang("login_alter_login"); ?> </h2>
-		<p> <?php echo lang("login_tba"); ?> </p>
+		<?
+		if(!empty($authUrl)) { ?>
+		    <a id="fb-login-link" href="<? echo $authUrl ?>"><img class="img" id="fbbtn" src = "<? echo base_url() ?>images/fbbutton.png" alt="Log in via Facebook"></a>
+		    
+        <?
+        }
+        ?>
 	</div>
 </div>
 <!-- </form> -->

@@ -23,9 +23,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				<tr>
 				<td><img class="media-object news_pic" src= "<? echo $imgurl ?>" alt="Reference picture">		</td>
 				<td class="myrecipe-title"><? echo $name ?> <em class="myrecipet-date"><? echo $datecreated ?></em></td>
+				
 				</tr>
 			</table>
 			</div>
+			
+            <button onclick="location.href='http://ezcooking.cs.ut.ee/profile/delPost/<? echo $id ?>'" type="button">
+            <? echo lang("your_profile_postdel") ?></button>
         
 	   <? endforeach ?>
 	    <br>

@@ -268,3 +268,5 @@
 [23-Apr-2017 20:35:57 Europe/Tallinn] PHP Parse error:  syntax error, unexpected '$title' (T_VARIABLE), expecting ',' or ';' in /webpages/ezcookingcsut/public_html/application/controllers/Annetus.php on line 30
 [23-Apr-2017 20:35:57 Europe/Tallinn] PHP Parse error:  syntax error, unexpected '$title' (T_VARIABLE), expecting ',' or ';' in /webpages/ezcookingcsut/public_html/application/controllers/Annetus.php on line 30
 [23-Apr-2017 20:36:22 Europe/Tallinn] PHP Parse error:  syntax error, unexpected '$title' (T_VARIABLE), expecting ',' or ';' in /webpages/ezcookingcsut/public_html/application/controllers/Annetus.php on line 30
+[07-May-2017 17:25:45 Europe/Tallinn] PHP Parse error:  syntax error, unexpected '/' in /webpages/ezcookingcsut/public_html/application/controllers/Login.php on line 34
+[07-May-2017 18:43:19 Europe/Tallinn] PHP Fatal error:  Call to a member function xpath() on null in /webpages/ezcookingcsut/public_html/application/views/welcome_message.php on line 9

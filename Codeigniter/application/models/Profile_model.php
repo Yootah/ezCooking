@@ -16,5 +16,14 @@ class Profile_model extends CI_Model {
 		$result = $query -> result_array();
 		return $result;
     }
+    
+    public function delete_Recipe($recid) {
+        $uname = $_SESSION['username'];
+        $this->db->trans_start();
+        $this->db->query("call sp_delIngredient('$recid')");
+        $this->db->query("call sp_delSteps('$recid')");
+        $this->db->query("call sp_delRecipe('$recid')");
+        $this->db->trans_complete();
+    }
 }
 ?>

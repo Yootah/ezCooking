@@ -11,6 +11,12 @@ $res = openssl_pkey_new($config);
 openssl_pkey_export($res, $private_key);
 
 $now = new DateTime(null, new DateTimeZone('Europe/Tallinn'));
+
+$lang = $this -> session -> userdata('site_lang');
+if ($lang == 'english') {
+	$lang = 'ENG';
+}
+else {$lang = 'EST';}
 $fields = array(
         "VK_SERVICE"     => "1011",
         "VK_VERSION"     => "008",
@@ -28,7 +34,7 @@ $fields = array(
                                             dirname ($_SERVER['PHP_SELF']) . '/fail',
         "VK_DATETIME"    => date_format($now, 'Y-m-d H:i:s'),
         "VK_ENCODING"    => "utf-8",
-        "VK_LANG"        => "ENG"
+        "VK_LANG"        => $lang
 );
 $data = str_pad (mb_strlen($fields["VK_SERVICE"], "UTF-8"), 3, "0", STR_PAD_LEFT) . $fields["VK_SERVICE"] .
         str_pad (mb_strlen($fields["VK_VERSION"], "UTF-8"), 3, "0", STR_PAD_LEFT) . $fields["VK_VERSION"] .
@@ -48,30 +54,21 @@ $fields["VK_MAC"] = base64_encode($signature);
 ?>
 
 <div class="container" id="content1">
-
-
-
-        <form method="post" action="http://localhost:8080/banklink/swedbank-common">
+        <form method="post" action="https://www.swedbank.ee/banklink">
             <!-- include all values as hidden form fields -->
 			<?php foreach($fields as $key => $val){
 					echo '<input type="hidden" name="' .$key . ' "value="' . htmlspecialchars($val). '" />' . "\n";
 				}
 ?>			<div class="row">
-				<h2 id="annetusedpealkiri" class="alert"> Siin saad teha annetuse</h2>
+				<h2 id="annetusedpealkiri" class="alert"> <? echo lang('donation_top') ?></h2>
 			</div>
 			<div class="row">
 				<div class="col-xs-6">
-					<h3>Korrega saab annetada ainult 12 eurot! </h3>
+					<h3><? echo lang('donation_text') ?> </h3>
+					<? echo lang('donation_tba') ?>
 					<div class="form-group">
-						<!--<tr><td colspan="2"><input type="submit" class="btn btn-special" value="Annetama!" /></td></tr> -->
-					 <input type="submit" class="btn btn-special" value="Annetama!" />
-						
-						
-						<!--<button type="submit">Annetama</button> -->
-						
-
-						
-					</div>
+					 <input type="submit" class="btn btn-special" value=<? echo lang('donation_button') ?> />
+						</div>
 				</div>
 			</div>
         </form>

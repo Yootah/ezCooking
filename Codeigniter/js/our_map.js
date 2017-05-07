@@ -4,7 +4,7 @@ function myMap() {
 	        return;
 	    }
 	var mapProp= {
-	    center:new google.maps.LatLng(51.508742,-0.120850),
+	    center:new google.maps.LatLng(58.376649,26.732214),
 	    zoom:5,
 	};
 	var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);

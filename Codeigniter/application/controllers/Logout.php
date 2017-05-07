@@ -4,6 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Logout extends CI_Controller {
 	function __construct() {
 		parent:: __construct();
+		$this->load->library('facebook');
 	}
 
 	/**
@@ -25,6 +26,7 @@ class Logout extends CI_Controller {
 	{
 		unset($_SESSION['logged_in']);
 		unset($_SESSION['username']);
+		$this->facebook->destroy_session();
 		header( "refresh:5;url=".base_url()."welcome" );
 		$this->load->view('logout');
 		//echo "You have successfully logged out, you will be redirected to main page now.";

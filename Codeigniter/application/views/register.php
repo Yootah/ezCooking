@@ -35,7 +35,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</div>
 	<div class="form-group"> 
 		<div class="col-md-4">
-			<input type='submit' value=<?php echo lang("register_button_register"); ?>>
+			<input type='submit' value='<? echo lang("register_button_register"); ?>'>
 		</div>
 		<br>
 	</div>

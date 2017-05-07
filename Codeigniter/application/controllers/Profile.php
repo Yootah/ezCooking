@@ -42,4 +42,9 @@ class Profile extends CI_Controller {
 		$data['rand'] = $this->Random_post_model->getRandomID();  // RANDOM BUTTON DATA
 		$this->load->view('footer', $data); // DO NOT CHANGE
 	}
+	
+	public function delPost($recid){
+	    $this->Profile_model->delete_Recipe($recid);
+	    redirect("profile/");
+	}
 }

@@ -21,5 +21,15 @@ class News_model extends CI_model {
 		}
 		return $xmldata->asXML();
 	}
+	
+	public function getNewestId() {
+	    $this -> db -> select('recipe_id');
+	    $this -> db -> from('view_news_by_date');
+	    $this -> db -> limit(1);
+	    $query = $this -> db -> get();
+	    $result = $query -> result_array();
+	    
+	    return $result[0]['recipe_id'];
+	}
 }
 ?>

@@ -6,7 +6,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="en">
 <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	
-	
 	<?php 
     if(isset($title)){
     echo "<title>" . $title . "</title>";
@@ -15,20 +14,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	}
     ?>
 	<link rel="stylesheet" href="<? echo base_url() ?>css/bootstrap.min.css"  type="text/css" />
-	<link rel="stylesheet" href="<? echo base_url() ?>css/theme1.css"  type="text/css" /> 
-	<link rel="stylesheet" href="<? echo base_url() ?>css/dropdown.css"  type="text/css" /> 
-	<link rel="stylesheet" href="<? echo base_url() ?>css/postStyle.css"  type="text/css" />
-	<link rel="stylesheet" href="<? echo base_url() ?>css/navigation.css"  type="text/css" />
+	<link rel="stylesheet" href="<? echo base_url() ?>css/theme1.css"  type="text/css" />
 	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="<? echo base_url() ?>js/bootstrap.min.js"></script>
-	<script src="<? echo base_url() ?>js/dropdown.js"></script>
-	<script src="<? echo base_url() ?>js/newPostScript.js"></script>
-		
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjb1xr0GjkW66pZ7wD2DevRU0kYCyecvk&callback=myMap"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgmFmBHuZBUAeh173wm2RPje2AM8wNQxc"></script>
 	<script type='text/javascript'>var php_NEWS_TO_SHOW = <? echo NEWS_TO_SHOW ?></script>
-	<script src="<?php echo base_url(); ?>js/loadMoreNews.js"></script>
-	<script type="text/javascript" src="<? echo base_url() ?>js/jquery.history.js"></script>
+	<script src="<?php echo base_url(); ?>js/loadMoreNews.min.js"></script>
 	
 
 </head>
@@ -42,7 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	    <table>
 	<tr>
 	<td>
-			<a href="<? echo base_url() ?>welcome"><img src = "<? echo base_url() ?>images/logo.png" width="100" height="100" alt="ezCooking logo"></a>
+			<a href="<? echo base_url() ?>welcome"><img id="ezc-logo" src = "<? echo base_url() ?>images/logo.png" alt="ezCooking logo"></a>
 	</td>
 	<td>
 			<!-- Hamburger icon -->
@@ -73,13 +65,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					}
 					?>
 					<!--<li class="all"><a href="./annetus"><? echo lang('menu_donation') ?></a></li>-->
-	                <li class="all"><a href="./search"><?php echo lang("menu_search"); ?></a></li>
-					<li class="all"><a href="<? echo base_url() ?>sitemap"><?php echo lang("sitemap_title"); ?></a></li>
+	                <li class="all"><a href="<? echo base_url() ?>search"><?php echo lang("menu_search"); ?></a></li>
 	                
 	                <li class="all"><a href="<? echo base_url() ?>aboutus"><?php echo lang("menu_aboutus"); ?></a></li>
 					<li><a href="<?php echo base_url(); ?>index.php/welcome/changeLanguage/estonian"><img class="img" alt="estonian flag" src="<?php echo base_url(); ?>images/est.png"/></a></li>
 					<li><a href="<?php echo base_url(); ?>index.php/welcome/changeLanguage/english"><img class="img" alt="union jack" src="<?php echo base_url(); ?>images/gb.png"/></a></li>
-					<li><a href = "" data-toggle = "tooltip" data-placement = "right" title = "<?php echo lang('language_change_help'); ?>"><img class="img" alt="#" src="<?php echo base_url(); ?>images/emark.png"/></a></li>
+					<li><a data-toggle = "tooltip" data-placement = "right" title = "<?php echo lang('language_change_help'); ?>"><img class="img" alt="#" src="<?php echo base_url(); ?>images/emark.png"/></a></li>
 	            </ul>
 	        </div>
 	</td></tr></table>
