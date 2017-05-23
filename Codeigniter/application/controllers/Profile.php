@@ -28,11 +28,15 @@ class Profile extends CI_Controller {
 	 */
 	public function index()
 	{
+		if ($this->session->userdata('site_lang') == '') {
+			$this->session->set_userdata('site_lang', 'english');
+		}
 		if (!isset($_SESSION['username'])) {
+			echo 'You are not logged in!';
 			redirect('welcome');
 		}
 		//$this->load->view('first');
-		$title['title'] = "Your profile";
+		$title['title'] = lang('menu_profile');
 		$this->load->view('navigation', $title); // DO NOT CHANGE
 		
         $profdata['n'] = $this->Profile_model->getPostNum();

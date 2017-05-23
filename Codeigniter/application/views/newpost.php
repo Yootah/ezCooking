@@ -1,16 +1,21 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?>
+<script>var php_step="<? echo lang('rec_step')?>";</script>
 <div class = "well">
 	<h1><?php echo lang('post_recp_create_new'); ?></h1>
+	<br>
 	<form action="http://ezcooking.cs.ut.ee/newPost/submit_recipe" method="post" accept-charset="utf-8" class="form-horizontal" id="new_recipe_form">
   		<div class="form-group">
     			<div class="col-md-6">
      				 <input type="text" name="recipeName" class="form-control" id="name" placeholder= "<?php echo lang('post_recp_nameing'); ?>">
+     				 <br>
      				 <input type="text" name="estimatedTime" class="form-control" id="time" placeholder= "<?php echo lang('post_recp_length'); ?>">
+     				 <br>
     			</div>
     		</div>
     		<h2><?php echo lang('post_ingredients'); ?></h2>
+    		<br>
     		<div class="ingredients-list">
 	    		<div class="row">
 	    			<div class="ingredient-data" id="ingredients-list-elem1">
@@ -30,24 +35,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		    			<div class="col-md-2">
 		    				<input type="text" class="form-control" name="type1" id="type" placeholder="<?php echo lang('post_recp_type'); ?>">
 		    			</div>
+		    			<br>
 	    			</div>
 	    		</div>
 	    	</div>
+	    	<br>
     		    <button type="button" class="btn" onclick="addIngredient()"><?php echo lang('post_recp_addingr'); ?></button>
+    		    <br>
     		<div class="form-group" id="step-list">
     			<h2><?php echo lang('post_steps'); ?></h2>
+    			<br>
     			<div class="form-group" id="step-list-elem">
     				<div class="col-md-1">
-    					<label class="steplabel"> Step1</label>
+    					<label class="steplabel"> <? echo lang('rec_step'); ?> 1</label>
     				</div>
     				<div class="col-md-6">
     					<textarea class="form-control" maxlength="100" name="step1" rows="1" id="step1" placeholder="<?php echo lang('post_recp_desc'); ?>"></textarea>	
     				</div>
     			</div>
-    		
     		</div>
     		<button type="button" class="btn" onclick="addStep()"><?php echo lang('post_recp_addsteps'); ?></button>
-    		
+    		<br>
     		<div class="form-group" id="image-upload-area">
     			
     			<h2><?php echo lang('post_recp_image'); ?></h2>
@@ -62,6 +70,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     			</div>
     		</div>
     		</div>
-    		<input type="submit" value="<?php echo lang('post_me'); ?>" class="btn btn-info">
+    		<input type="submit" value="<?php echo lang('post_me'); ?>" class="btn btn-primary">
 	</form>
 </div>
+<script>
+    $('#timeformatExample1').timepicker({ 'timeFormat': 'H:i:s', 'step': 5 });
+</script>

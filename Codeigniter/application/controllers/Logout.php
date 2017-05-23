@@ -24,6 +24,13 @@ class Logout extends CI_Controller {
 	 */
 	public function index()
 	{
+		if ($this->session->userdata('site_lang') == '') {
+			$this->session->set_userdata('site_lang', 'english');
+		}
+		if (!isset($_SESSION['username'])) {
+			redirect('welcome');
+		}
+		$title['title'] = lang('menu_logout');
 		unset($_SESSION['logged_in']);
 		unset($_SESSION['username']);
 		$this->facebook->destroy_session();

@@ -9,8 +9,11 @@ class Register extends CI_Controller {
 	}
 
 	public function index()
-	{		
-		$title['title'] = 'Register - ezCooking';
+	{
+		if ($this->session->userdata('site_lang') == '') {
+			$this->session->set_userdata('site_lang', 'english');
+		}
+		$title['title'] = lang('menu_register');
 		$this->load->view('navigation', $title);
 		
 		$this->load->helper(array('form'));

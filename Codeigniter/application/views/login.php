@@ -1,13 +1,14 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
 ?>
 
 <div class="col-sm-offset-2 col-sm-10">
 <h1> <? echo lang('login_title') ?> </h1>
 </div>
 <div>
-	<?php echo validation_errors(); ?>
+    <? if (validation_errors()!="" && validation_errors()!=null){ ?>
+    <div class="alert alert-warning col-sm-offset-2"> <strong>Attention!</strong> <?php echo validation_errors(); ?></div>
+	<?}?>
 	<?php echo form_open('login'); ?>
 		<div class="col-sm-offset-2 col-sm-10">
 			<label class="control-label col-md-2" for='username'><?php echo lang("login_username"); ?></label>
@@ -19,14 +20,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			<table>
 			<tr>
 				<td>
-					<input type='submit' class="btn btn-success" value='<?php echo lang("login_button_log_in"); ?>'/>
+					<input type='submit' class="btn btn-primary" value='<?php echo lang("login_button_log_in"); ?>'/>
 				</td>
-				<!--<td>
-					<label><input type="checkbox"><?php echo lang("login_checkbox"); ?></label>
-				</td>
-				<td>
-					<button type="button" class="btn btn-link"><?php echo lang("login_forgot"); ?></button>
-				</td>-->
 			</tr>
 			</table>
 		</div>

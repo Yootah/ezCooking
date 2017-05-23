@@ -26,6 +26,9 @@ class Post extends CI_Controller {
 	 */
 	public function index($postid)
 	{
+		if ($this->session->userdata('site_lang') == '') {
+			$this->session->set_userdata('site_lang', 'english');
+		}
 		if(!isset($postid) || count($postid)==0){
 			redirect('welcome');
 		}

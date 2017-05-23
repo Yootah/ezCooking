@@ -18,9 +18,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="<? echo base_url() ?>js/bootstrap.min.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBgmFmBHuZBUAeh173wm2RPje2AM8wNQxc"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC5iebfM8DRYZ4cgIMwv1Le7o82vaOEYI"></script>
 	<script type='text/javascript'>var php_NEWS_TO_SHOW = <? echo NEWS_TO_SHOW ?></script>
 	<script src="<?php echo base_url(); ?>js/loadMoreNews.min.js"></script>
+	<script src="<?php echo base_url(); ?>js/newPostScript.min.js"></script>
+	<script src="<?php echo base_url(); ?>js/our_map.js"></script>
 	
 
 </head>
@@ -28,13 +30,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <table class = "global-table">
 <tr>
 <td class= "td_borders"></td>
-<td colspan="3">
+<td>
 	<nav class="navbar navbar-default">
 	    <div class="container-fluid">
-	    <table>
-	<tr>
+	    <table class="navbar-table">
+	<tr class="navbar-row">
 	<td>
-			<a href="<? echo base_url() ?>welcome"><img id="ezc-logo" src = "<? echo base_url() ?>images/logo.png" alt="ezCooking logo"></a>
+			<a href="<? echo base_url() ?>welcome"><img id="ezc-logo" src = "<? echo base_url() ?>images/uuslogo3.png" alt="ezCooking logo"></a>
 	</td>
 	<td>
 			<!-- Hamburger icon -->
@@ -51,12 +53,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	            <ul class="nav navbar-nav">
 					
 					<?php
-					echo '<li class="all"><a href="' . base_url() . 'welcome' . '">' . lang("menu_news") . '</a></li>';
+					echo '<li class="all"><a href="' . base_url() . 'welcome' . '">' . lang("menu_news") . '</a></li>';?>
+					<li class="all"><a href="<? echo base_url() ?>search"><?php echo lang("menu_search"); ?></a></li>
+					<?
 					if (isset($_SESSION['logged_in'])) {
 						//echo '<li onclick="myFunction()" class="dropbtn dropdown" id="newsButton">' . lang("menu_news") . '<div id="myDropdown" class="dropdown-content">
 						//	<a href="' . base_url() . 'welcome' . '">'. lang("menu_hot") . '</a></li>';
 						echo '<li class="all"><a href="' . base_url() . 'profile' . '">' . lang("menu_profile") . '</a></li>';
-						echo '<li class="all"><a href="' . base_url() . 'logout' . '">' . lang("menu_logout") . '</a></li>';
+
 					}
 					else {
 						
@@ -65,15 +69,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					}
 					?>
 					<!--<li class="all"><a href="./annetus"><? echo lang('menu_donation') ?></a></li>-->
-	                <li class="all"><a href="<? echo base_url() ?>search"><?php echo lang("menu_search"); ?></a></li>
+	                
 	                
 	                <li class="all"><a href="<? echo base_url() ?>aboutus"><?php echo lang("menu_aboutus"); ?></a></li>
-					<li><a href="<?php echo base_url(); ?>index.php/welcome/changeLanguage/estonian"><img class="img" alt="estonian flag" src="<?php echo base_url(); ?>images/est.png"/></a></li>
-					<li><a href="<?php echo base_url(); ?>index.php/welcome/changeLanguage/english"><img class="img" alt="union jack" src="<?php echo base_url(); ?>images/gb.png"/></a></li>
-					<li><a data-toggle = "tooltip" data-placement = "right" title = "<?php echo lang('language_change_help'); ?>"><img class="img" alt="#" src="<?php echo base_url(); ?>images/emark.png"/></a></li>
-	            </ul>
+	                <?if (isset($_SESSION['logged_in'])) {
+	                    echo '<li class="all"><a href="' . base_url() . 'logout' . '">' . lang("menu_logout") . '</a></li>';
+	                } ?>
+	                </ul>
+	                
+	                
 	        </div>
-	</td></tr></table>
+	</td>
+	<td class="lang-btn">
+					<a href="<?php echo base_url(); ?>index.php/welcome/changeLanguage/estonian"><img class="img" alt="estonian flag" src="<?php echo base_url(); ?>images/est.png"/></a> </td>
+					<td class="lang-btn"><a href="<?php echo base_url(); ?>index.php/welcome/changeLanguage/english"><img class="img" alt="union jack" src="<?php echo base_url(); ?>images/gb.png"/></a> </td>
+					<td class="lang-btn"><a data-toggle = "tooltip" data-placement = "right" title = "<?php echo lang('language_change_help'); ?>"><img class="img" alt="#" src="<?php echo base_url(); ?>images/emark.png"/></a> </td>
+	</tr></table>
 	    </div>
 	</nav>
 </td>

@@ -16,12 +16,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <ul>
     <li><a href="http://ezcooking.cs.ut.ee/profile#/simple"><?php echo lang('profile_page_sm'); ?></a></li>
 </ul>
-<h2><?echo lang('posts_list')?></h2>
-<ul>
-  <li><a href="http://ezcooking.cs.ut.ee/post/2#/simple"><?php echo lang('post1_page_sm'); ?></a></li>
-  <li><a href="http://ezcooking.cs.ut.ee/post/4"><?php echo lang('post2_page_sm'); ?></a></li>
-  <li><a href="http://ezcooking.cs.ut.ee/post/5"><?php echo lang('post3_page_sm'); ?></a></li>
-  <li><a href="http://ezcooking.cs.ut.ee/post/20#/simple"><?php echo lang('post4_page_sm'); ?></a></li>
-  <li><a href="http://ezcooking.cs.ut.ee/post/17#/simple"><?php echo lang('post5_page_sm'); ?></a></li>
-</ul>
 </div>

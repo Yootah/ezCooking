@@ -26,7 +26,10 @@ class Aboutus extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->library('googlemaps');
+		if ($this->session->userdata('site_lang') == '') {
+			$this->session->set_userdata('site_lang', 'english');
+		}
+		$this->load->library('googlemaps'); 
 		
 		$config = array();
 		$config['center'] = 'tartu, estonia';
@@ -43,7 +46,7 @@ class Aboutus extends CI_Controller {
 		
 		$this -> googlemaps -> initialize();
 		$data['map'] = $this-> googlemaps -> create_map();
-		$title['title'] = 'About us';
+		$title['title'] = lang('menu_aboutus');
 		$this->load->view('navigation', $title); // DO NOT CHANGE
 		$this->load->view('aboutus', $data); //
 		$footdata['rand'] = $this->Random_post_model->getRandomID();  // RANDOM BUTTON DATA

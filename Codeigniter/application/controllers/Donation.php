@@ -25,14 +25,11 @@ class Donation extends CI_Controller {
 	 */
 	public function index()
 	{
-		if(!isset($_SESSION)) { 
-			session_start();
-		}
 		if ($this->session->userdata('site_lang') == '') {
 			$this->session->set_userdata('site_lang', 'english');
 		}
 		//$this->load->view('first');
-		$title['title'] = lang('donation_title');
+		$title['title'] = lang('menu_donation');
 		$this->load->view('navigation', $title); // DO NOT CHANGE
 		$this->load->view('annetus'); //
 		$data['rand'] = $this->Random_post_model->getRandomID();  // RANDOM BUTTON DATA

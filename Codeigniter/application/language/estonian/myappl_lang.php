@@ -13,6 +13,8 @@ $lang['menu_aboutus'] = 'Meist';
 $lang['menu_profile'] = 'Profiil';
 $lang['menu_donation'] = "Annetus";
 $lang["language_change_help"] = "NB! Keelevahetus viib sind pealehele!";
+$lang['menu_newPost'] = "Uus Postitus";
+$lang['menu_sitemap'] = "Sisukord";
 
 // Footer
 $lang['footer_quote'] = '"15 nädalat probleeme"';
@@ -36,10 +38,12 @@ $lang['main_button_load_news'] = 'Lae vanemaid';
 
 // Search
 $lang['search_title'] = 'Kiirem otsing kindlate retseptide jaoks';
-$lang['search_field_search_title'] = 'Otsing nime järgi';
-$lang['search_field_sorted_by'] = 'Sorteeritud: ';
+$lang['search_field_search_title'] = 'Retsepti pealkiri (või osa sellest)';
+$lang['search_field_sorted_by'] = 'Sorteerimisalus: ';
 $lang['search_button_advanced'] = 'Täpsem otsing';
-$lang['search_table_name'] = 'Restept';
+$lang['search_button_simple'] = 'Peida täpsem otsing';
+$lang['search_simple'] = 'Lihtotsing';
+$lang['search_table_name'] = 'Restepti nimi';
 $lang['search_table_author'] = 'Autor';
 $lang['search_table_date'] = 'Lisatud kuupäev';
 $lang["advanced_search_help"] = "Täpsem otsing veel arendamisel";
@@ -51,15 +55,21 @@ $lang["advanced_search_help"] = "Täpsem otsing veel arendamisel";
 
 // Log In
 $lang['login_title'] = 'Tere tulemast tagasi!';
-$lang['login_username'] = 'Kasutajanimi: ';
+$lang['login_username'] = 'Kasutajanimi';
 $lang['login_field_username'] = 'Kasutajanimi';
-$lang['login_password'] = 'Parool: ';
+$lang['login_password'] = 'Parool';
 $lang['login_field_password'] = 'Parool';
 $lang['login_button_log_in'] = 'Sisene';
 $lang['login_checkbox'] = 'Mäleta mind';
 $lang['login_forgot'] = 'Unustasid parooli?';
 $lang['login_alter_login'] = 'Või logi sisse:';
 $lang['login_tba'] = 'Endiselt töös :S';
+
+//Log out
+$lang['logout_msg_success'] = "Olete edukalt välja loginud, teid suunatakse pealehele umbes 5 sekundi pärast...";
+$lang['logout_msg_redirect'] = "Juhul kui ümbersuunamist ei toimu, klikkige palun ";
+$lang['logout_msg_link'] = "sellele lingile";
+$lang['logout_msg_please'] = ". ";
 
 // About Us
 $lang['aboutus_title'] = 'Tervitused ezCooking tiimilt';
@@ -68,14 +78,14 @@ $lang['aboutus_repo'] = 'Meie repo link';
 
 // Register
 $lang['register_title'] = 'Registreeru';
-$lang['register_username'] = 'Kasutajanimi: ';
-$lang['register_field_username'] = 'Kasutajanimi';
-$lang['register_email'] = 'E-mail: ';
-$lang['register_field_email'] = 'E-mail';
+$lang['register_username'] = 'Kasutajanimi';
+$lang['register_field_username'] = 'LaheNimi123';
+$lang['register_email'] = 'E-mail';
+$lang['register_field_email'] = 'naiteks.see@hot.ee';
 $lang['register_checkbox_private'] = 'Privaatne';
-$lang['register_password'] = 'Parool: ';
-$lang['register_field_password'] = 'Parool';
-$lang['register_password_confirm'] = 'Kinnita parool: ';
+$lang['register_password'] = 'Parool';
+$lang['register_field_password'] = 'Hoia salajas!';
+$lang['register_password_confirm'] = 'Kinnita parool';
 $lang['register_field_password_confirm'] = 'Parool uuesti';
 $lang['register_checkbox_notify'] = 'Saada teavitused mailile';
 $lang['register_button_register'] = 'Registreeru';
@@ -92,7 +102,7 @@ $lang['post_eta'] = 'Aega kulub';
 $lang['post_steps'] = 'Sammud';
 //$land['post_button_sub'] = 'Telli antud kategooriast!';
 $lang['post_recp_nameing'] = 'Anna oma retseptile nimi';
-$lang['post_recp_length'] = 'Kaua see võtab aega? nt. 0:10:0 tähendab 10 minutit';
+$lang['post_recp_length'] = 'Kaua see võtab aega? nt. 00:10:00 tähendab 10 minutit';
 $lang['post_recp_create_new'] = 'Loo uus postitus';
 $lang['post_recp_amount'] = 'Kogus';
 $lang['post_recp_unit'] = 'Ühik';
@@ -106,6 +116,7 @@ $lang['post_recp_imageurl'] = 'Pildi link';
 $lang['post_recp_shortdesc'] = 'Lühikirjeldus';
 $lang['post_recp_shortdescdesc'] = 'Kirjuta lühike kirjeldus, mida näidatakse avalehel!';
 $lang['post_me'] = 'Postita mind!';
+$lang['rec_step'] = "Samm";
 
 //Sitemap
 $lang['sitemap_title'] = "Sisukord";
@@ -132,6 +143,7 @@ $lang["your_profile_is_secret"] = "P.S. praegu on su profiilileht ülisalajane ;
 $lang["your_profile_recipe_count"] = "Sul on retsepte: ";
 $lang["your_profile_secret_help"] = "See tähendab, et seda näed ainult sina";
 $lang['your_profile_postdel'] = "Kustuta postitus!";
+$lang["your_rec"] = "Sinu postitused";
 
 //Donations
 $lang['donation_title'] = 'Annetused';
@@ -141,4 +153,9 @@ $lang['donation_text'] = 'Nuppu vajutamisel te annetate 12 EUR meile!';
 $lang['donation_button'] = 'Annetus!';
 $lang['donation_tba'] = 'Lähedas tulevikus lisame ka summa sisestamist ja muud seadeid!';
 
+//error
+$lang['error-nothing-cool'] = "Vabandust, siin pole midagi lahedat";
+
+//meta
+$lang['mylang'] = 'eesti';
 ?>

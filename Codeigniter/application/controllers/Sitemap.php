@@ -25,7 +25,10 @@ class Sitemap extends CI_Controller {
 	 */
 	public function index()
 	{
-		$title['title'] = 'Sitemap';
+		if ($this->session->userdata('site_lang') == '') {
+			$this->session->set_userdata('site_lang', 'english');
+		}
+		$title['title'] = lang('menu_sitemap');
 		$this->load->view('navigation', $title); // DO NOT CHANGE
 		$this->load->view('sitemap'); //
 		$footdata['rand'] = $this->Random_post_model->getRandomID();  // RANDOM BUTTON DATA

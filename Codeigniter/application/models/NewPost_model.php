@@ -9,7 +9,7 @@ class NewPost_model extends CI_Model {
         foreach($form_data as $k=>$v) {
             if ($k == "step".$i){
                 $onr = $i;
-                $desc = $form_data[$k];
+                $desc = filter_var($form_data[$k], FILTER_SANITIZE_SPECIAL_CHARS);
                 $this->db->trans_start();
                 $this->db->query("call sp_addStep('$recid', '$onr', '$desc')");
                 $this->db->trans_complete();
@@ -23,8 +23,8 @@ class NewPost_model extends CI_Model {
         $i = 1;
         foreach($form_data as $k=>$v) {
             if ($k == "type".$i){
-                $t = $form_data['type'.$i];
-                $m = $form_data['manufacturer'.$i];
+                $t = filter_var($form_data['type'.$i], FILTER_SANITIZE_SPECIAL_CHARS);
+                $m = filter_var($form_data['manufacturer'.$i], FILTER_SANITIZE_SPECIAL_CHARS);
                 $this->db->trans_start();
                 $this->db->query("call sp_addIngredient('$t', '$m', @newid)");
                 $query = $this->db->query('select @newid as out_param');
@@ -42,11 +42,11 @@ class NewPost_model extends CI_Model {
     }
     
     public function createRecipe($form_data) {
-        $rname = $form_data['recipeName'];
+        $rname = filter_var($form_data['recipeName'], FILTER_SANITIZE_SPECIAL_CHARS);
         $author = $_SESSION['username'];
         $etime = $form_data['estimatedTime'];
-        $sdesc = $form_data['shortDescription'];
-        $iurl = $form_data['imageURL'];
+        $sdesc = filter_var($form_data['shortDescription'], FILTER_SANITIZE_SPECIAL_CHARS);
+        $iurl = filter_var($form_data['imageURL'], FILTER_SANITIZE_SPECIAL_CHARS);
         $this->db->trans_start();
         $this->db->query("call sp_addRecipe('$rname', '$author', '$etime','$sdesc','$iurl', @newid)");
         $query = $this->db->query('select @newid as out_param');

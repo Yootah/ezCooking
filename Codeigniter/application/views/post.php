@@ -37,7 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<th><?php echo lang('post_recp_manufacturer'); ?></th>
 		</tr></thead><tbody>
 		    <? foreach ($xml->table->tbody->tr as $tablerow) {
-		        echo "<tr>";
+		        echo "<tr>"; 
 		        foreach ($tablerow as $cell=>$val) {
 		            echo "<td>".$val."</td>";
 		        }

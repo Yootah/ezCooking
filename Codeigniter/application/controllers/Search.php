@@ -24,9 +24,11 @@ class Search extends CI_Controller {
 	 */
 	public function index()
 	{
-		
+		if ($this->session->userdata('site_lang') == '') {
+			$this->session->set_userdata('site_lang', 'english');
+		}
 		//$this->load->view('first');
-		$title['title'] = 'Search';
+		$title['title'] = lang('menu_search');
 		$this->load->view('navigation', $title); // DO NOT CHANGE
 		$data['db_resp'] = null;
 		$this->load->view('search', $data); //
@@ -35,16 +37,18 @@ class Search extends CI_Controller {
 	}
 	
 	public function show_search(){
+		$title['title'] = lang('menu_search');
 		$search = $this->input->post('search');
 		$author = $this->input->post('author');
+		$order = $this->input->post('order');
 		$this->load->model("Search_model");
-		$data['db_resp']=$this->Search_model->getSearchArray($search);
+		$data['db_resp']=$this->Search_model->getSearchArray($search, $author, $order);
+		//print_r($data['db_resp']);
 		if (count($data['db_resp'])>0) {
 			echo $this->load->view('searchresults',$data, TRUE);
 		}
 		else echo "No posts found, sry wrong litterbox";
 		
-		$title['title'] = 'Search';
 		
 		
 	}

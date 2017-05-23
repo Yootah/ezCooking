@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 /*Custom constants*/
-define('NEWS_TO_SHOW', 2);
+define('NEWS_TO_SHOW', 5);
 
 /*
 |--------------------------------------------------------------------------

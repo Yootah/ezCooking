@@ -27,7 +27,10 @@ class Login extends CI_Controller {
 	 */
 	public function index()
 	{
-	    $title['title'] = 'Login';
+		if ($this->session->userdata('site_lang') == '') {
+			$this->session->set_userdata('site_lang', 'english');
+		}
+	    $title['title'] = lang('menu_login');
 		$this->load->helper(array('form'));
 		$this->load->view('navigation', $title); // DO NOT CHANGE
 	    

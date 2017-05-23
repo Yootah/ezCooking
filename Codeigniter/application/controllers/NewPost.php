@@ -26,10 +26,10 @@ class NewPost extends CI_Controller {
 	 */
 	public function index()
 	{
-	    if (!isset($_SESSION['logged_in'])){
-	        redirect("Welcome");
-	    }
-		$title['title'] = 'New Post';
+	    if ($this->session->userdata('site_lang') == '') {
+			$this->session->set_userdata('site_lang', 'english');
+		}
+		$title['title'] = lang('menu_newPost');
 		$this->load->view('navigation', $title); // DO NOT CHANGE
 		$this->load->view('newpost'); //
 		$data['rand'] = $this->Random_post_model->getRandomID();
